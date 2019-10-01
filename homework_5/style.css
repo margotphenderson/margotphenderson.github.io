@@ -1,45 +1,122 @@
-/*********** HEADER ************/
-header {
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    background-color: #f5f2f0;
-    color: #515151;
-    font-family: sans-serif;
-    position: fixed;
-    top: 0;
-    width: 100%;
+/*********** EVERYTHING ************/
+
+@font-face {
+  font-family: "Bangla MN";
+  src: url(BanglaMN.ttc) format('truetype');
 }
 
-.logo{
-  padding: 0;
+html{
+  margin:0;
+  padding:0;
+}
+
+a {   /* Remove underlines from all links */
+  text-decoration: none;
+}
+
+body {
   margin: 0;
+  margin-top: 165px; /* space below header+nav */
+  font-family: "Bangla MN", sans-serif;
+}
+
+h2 {   /* Top of page text titles */
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin: 0;
+  color: #7C7C7C;
+  font-family: "Bangla MN", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
   text-transform: uppercase;
 }
 
-.Cart {
-  float: right;
+/*********** HEADER ************/
+header {
+  text-align: center;
+  background-color: white;
+  color: #515151;
+  font-family: "Bangla MN", sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#header-background {
+  position: fixed;
+  object-fit: cover;
+  width: 100%;
+  height: 100px;
+  z-index: -1;
+}
+
+#header-background img{
+  position: fixed;
+  left:0;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  overflow: hidden;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+#logo{   /* BunBun BakeShop */
+  display: inline-block;
+}
+
+h1{   /* Logo:  BakeShop */
+  margin:0;
+  margin-top: 30px;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0.9;
+  color: #515151;
+}
+
+h1 span{   /* Logo:  BunBun */
+  font-size: 44px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #515151;
+}
+
+#cart {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  padding: 30px;
+}
+
+#cart img{
+  width: 45px;
+  height: auto;
 }
 
 nav {
-  margin: 0px;
-  padding: 0px;
   background-color: #edcdc2; /* used to be #E5C3B8 */
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
 }
 
 nav a {
   display: inline-block;
   color: #515151;
-  font-size: 18px;
-  text-align: center;
-  padding: 12px 50px;
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 8px;
+  height: 20px;
   text-decoration: none;
 }
 
 nav a:hover {
-  background-color: ;
+  /* background-color: white; */
   font-weight: bold;
 }
 
@@ -48,26 +125,7 @@ nav a:hover {
   font-weight: bold;
 }
 
-/*********** BODY ************/
-
-body {
-  margin: 0;
-  margin-top: 165px; /* below header+nav */
-  font-family: sans-serif;
-}
-
-.title {
-  position: ;
-  text-align: center;
-  padding: 15px;
-  padding-top: 30px;
-  color: gray;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 24px;
-  text-transform: uppercase;
-}
-/*********** HOME ************/
+/*********** HOME PAGE ************/
 
 .home-background img{
   position: fixed;
@@ -102,7 +160,7 @@ body {
   line-height: 1.5;
 }
 
-/*********** BROWSE ************/
+/*********** BROWSE PAGE ************/
 
 .grid {
   position: ;
@@ -113,7 +171,7 @@ body {
   border: ; /* 2px blue solid; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 60px;
+  grid-gap: 40px 60px;
 }
 
 .box {
@@ -124,7 +182,6 @@ body {
   border-radius: 5px;
   border: ; /* 2px dodgerblue solid; */
   text-align: center;
-  align: center;
   position:relative;
 }
 
@@ -136,23 +193,45 @@ body {
 
 .flavor {
   color: #515151;
-  font-family: sans-serif;
-  font-size: 16px;
+  font-family: "Bangla MN", sans-serif;
+  font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .flavor-desc {
   color: gray;
-  font-family: sans-serif;
-  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
   font-style: italic;
-  width: 160px;
+  font-weight: 300;
+  width: 200px;
   margin: auto;
+  line-height:1.2;
 }
 
-a {
-  text-decoration: none;
+/*********** PRODUCT DETAILS ************/
+
+.details-grid {
+  position: ;
+  padding: 0;
+  margin: 0;
+  border: 2px blue solid;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 60px 60px;
+}
+
+.details-box {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  background-color: ;
+  color: black;
+  border-radius: 5px;
+  border: 2px dodgerblue solid;
+  text-align: center;
+  position:relative;
 }
 
 /*********** FOOTER ************/
