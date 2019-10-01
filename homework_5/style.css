@@ -22,8 +22,8 @@ body {
 
 h2 {   /* Top of page text titles */
   text-align: center;
-  padding-top: 15px;
-  padding-bottom: 10px;
+  padding: 10px;
+  padding-top: 16px;
   margin: 0;
   color: #7C7C7C;
   font-family: "Bangla MN", sans-serif;
@@ -163,24 +163,20 @@ nav a:hover {
 /*********** BROWSE PAGE ************/
 
 .grid {
-  position: ;
-  padding: ;
   padding-top: 0;
   margin-left: 20%;
   margin-right: 20%;
-  border: ; /* 2px blue solid; */
+  /* border: 2px blue solid; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px 60px;
+  grid-gap: 40px 120px;
 }
 
 .box {
   display: block;
-  margin: ;
-  background-color: ;
-  color: black;
-  border-radius: 5px;
-  border: ; /* 2px dodgerblue solid; */
+  /* color: black; */
+  /* border-radius: 5px; */
+  /* border: 2px dodgerblue solid; */
   text-align: center;
   position:relative;
 }
@@ -216,9 +212,11 @@ nav a:hover {
   position: ;
   padding: 0;
   margin: 0;
+  margin-left: 15%;
+  margin-right: 15%;
   border: 2px blue solid;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 4fr 5fr;
   grid-gap: 60px 60px;
 }
 
