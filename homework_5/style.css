@@ -235,7 +235,18 @@ nav a:hover {
 /*********** FOOTER ************/
 
 footer {
-  position: fixed;
-  bottom: 0;
+  position: absolute;
+  display: inline-block;
   right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 20px;
+  padding-bottom: 0px;
+}
+/*** footer change for first page? ***/
+footer img{
+  padding: 5px;
+  filter: brightness(180%);
+  height: 30px;
+  width: auto;
 }
