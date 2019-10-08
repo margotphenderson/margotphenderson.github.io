@@ -16,8 +16,9 @@ a {   /* Remove underlines from all links */
 
 body {
   margin: 0;
-  margin-top: 165px; /* space below header+nav */
+  margin-top: 180px; /* space below header+nav */
   font-family: "Bangla MN", sans-serif;
+  color: #7C7C7C;
 }
 
 h2 {   /* Top of page text titles */
@@ -208,34 +209,109 @@ nav a:hover {
 
 /*********** PRODUCT DETAILS ************/
 
-.details-grid {
-  position: ;
-  padding: 0;
-  margin: 0;
-  margin-left: 15%;
-  margin-right: 15%;
-  border: 2px blue solid;
-  display: grid;
-  grid-template-columns: 4fr 5fr;
-  grid-gap: 60px 60px;
+#details-page{
+  margin-left:14%;
+  margin-right:14%;
 }
 
-.details-box {
-  display: flex;
+/**** LEFT SIDE ****/
+.left-side{
+  float: left;
+  width: 40%;
+}
+
+.backbutton{
+  color: gray;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 10px;
+  /* padding-top: 16px; */
+  margin: 0;
+  padding-left: 0;
+}
+
+.main-image{
+  width:100%;
+  /* border:2px solid white; */
+  margin:0;
+  padding:0;
+}
+
+.left-side span{
+  display: inline-block;
+  white-space:nowrap;
+  margin:0;
+  padding:0;
+  transform: translate(0, -10%);
+}
+
+.icing {
+  width:101px;
+  height: 75px;
+  /* border:1px solid white; */
+  margin:0;
+  padding:0;
+}
+
+/**** RIGHT SIDE ****/
+.right-side{
+  float: right;
+  width: 50%;
+}
+
+.right-side h2{
+  text-align:left;
+  padding-top: 32px;
+  padding-bottom: 20px;
+  margin-left:0;
+  padding-left:0;
+}
+.details-desc{
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight:300;
+  margin-bottom: 40px;
+}
+
+.right-side ul{
+  display: inline-block;
+  left:0;
   padding: 0;
   margin: 0;
-  background-color: ;
-  color: black;
-  border-radius: 5px;
-  border: 2px dodgerblue solid;
-  text-align: center;
-  position:relative;
+  text-align: left;
+  white-space:nowrap;
 }
+
+.right-side li{
+  list-style-type: none;
+  display: inline-block;
+  width: auto;
+  padding-right:20px;
+}
+
+.dchoc{
+  padding-right:0;
+}
+
+
+/* .right-side ul {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  left:0;
+}
+.right-side li {
+  flex: 1 1 1 1 100%;
+  padding: 0;
+  margin: auto;
+  padding-right: 20px;
+} */
 
 /*********** FOOTER ************/
 
 footer {
-  position: absolute;
+  position: fixed;
   display: inline-block;
   right: 0;
   bottom: 0;
@@ -245,6 +321,7 @@ footer {
 }
 /*** footer change for first page? ***/
 footer img{
+  display: inline-block;
   padding: 5px;
   filter: brightness(180%);
   height: 30px;
