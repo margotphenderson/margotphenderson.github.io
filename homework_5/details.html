@@ -1,145 +1,139 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Bun Bun Bake Shop</title>
-    <!-- styles -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
-  </head>
+<head>
+  <title>Bun Bun Bake Shop</title>
+  <!-- styles -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+</head>
 
 <!-- BODY -->
-  <body>
-    <header>
-      <div id="header-background">
-        <img src="Images/header-bg3.jpg">
-      </div>
+<body>
+  <header>
+    <div id="header-background">
+      <img src="Images/header-bg3.jpg">
+    </div>
 
-      <div id="logo">
-        <a href="index.html">
-          <h1><span class="bunbun">BUN BUN</span><br>BAKE SHOP</h1>
-        </a>
-      </div>
+    <div id="logo">
+      <a href="index.html">
+        <h1><span class="bunbun">BUN BUN</span><br>BAKE SHOP</h1>
+      </a>
+    </div>
 
-      <div id="cart">
-        <a href="#"><img src="Images/cart-gray.png"></a>
-      </div>
+    <div id="cart">
+      <a href="#"><img src="Images/cart-gray.png"></a>
+    </div>
 
-      <nav>
-        <a href="browse.html">MENU</a>
-        <a href="">CATERING</a>
-        <a href="">OUR STORY</a>
-        <a href="">VISIT US</a>
-      </nav>
-    </header>
+    <nav>
+      <a href="browse.html">MENU</a>
+      <a href="">CATERING</a>
+      <a href="">OUR STORY</a>
+      <a href="">VISIT US</a>
+    </nav>
+  </header>
 
 
-<div id="details-page">
-
+  <div id="details-page">
 <!--  LEFT SIDE -->
-  <div class="left-side">
-    <div class="backbutton">< See more flavors</div>
+    <div class="left-side">
+      <div class="backbutton">< See more flavors</div>
 
-    <img class="main-image" src="Images/original.jpg">
-    <span>
-      <img class="icing 1" src="Images/noicing.jpg">
-      <img class="icing 2" src="Images/sugarmilk.jpg">
-      <img class="icing 3" src="Images/vanillamilk.jpg">
-      <img class="icing 4" src="Images/doublechoc.jpg">
-    </span>
+      <img class="main-image" src="Images/original.jpg">
+      <span>
+        <img class="icing 1" src="Images/noicing.jpg">
+        <img class="icing 2" src="Images/sugarmilk.jpg">
+        <img class="icing 3" src="Images/vanillamilk.jpg">
+        <img class="icing 4" src="Images/doublechoc.jpg">
+      </span>
 
-    <p>Ingredients</p>
-    <p>Reviews</p>
+      <div class="under-images">
+        <button type="button" class="collapsible">
+          INGREDIENTS
+          <div class="arrow">
+            &#8964;
+          </div>
+        </button>
+        <!-- <div class="content">
+          <p>Lorem ipsum...</p>
+        </div> -->
+
+        <button type="button" class="collapsible">
+          REVIEWS &nbsp;&#9733;&#9733;&#9733;&#9733;&#9734;
+          <div class="arrow">
+            &#8964;
+          </div>
+        </button>
+        <!-- <div class="content">
+          <p>Lorem ipsum...</p>
+        </div> -->
+      </div>
+
+    </div>
+
+  <!--  RIGHT SIDE -->
+    <div class="right-side">
+      <h2>The Original</h2>
+      <div class="details-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod es tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet!
+        <br><br>Contains:  milk, eggs, wheat.</div>
+
+      <h3>Select Your Glazes:</h3>
+      <ul>
+        <li>No Glaze<br>
+          <select>
+            <option value="default">Quantity</option>
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="6">6</option>
+            <option value="12">12</option>
+          </select>
+        </li>
+
+        <li>Sugar Milk<br>
+          <select>
+            <option value="default">Quantity</option>
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="6">6</option>
+            <option value="12">12</option>
+          </select>
+        </li>
+
+        <li>Vanilla Milk<br>
+          <select>
+            <option value="default">Quantity</option>
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="6">6</option>
+            <option value="12">12</option>
+          </select>
+        </li>
+
+        <li class="dchoc">Double Chocolate<br>
+          <select>
+            <option value="default">Quantity</option>
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="6">6</option>
+            <option value="12">12</option>
+          </select>
+        </li>
+      </ul>
+      <br><br>
+      <span class="pricing">
+        Total: ..... $59.85
+      </span>
+      <br>
+      <button>Add to Cart</button>
+
+    </div>
+
   </div>
-
-<!--  RIGHT SIDE -->
-  <div class="right-side">
-    <h2>The Original</h2>
-    <div class="details-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod es tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet!
-      <br><br>Contains:  milk, eggs, wheat.</div>
-
-    <h3>Select Your Glazes:</h3>
-    <ul>
-      <li>No Glaze<br>
-        <select>
-          <option value="default">Quantity</option>
-          <option value="1">1</option>
-          <option value="3">3</option>
-          <option value="6">6</option>
-          <option value="12">12</option>
-        </select>
-      </li>
-
-      <li>Sugar Milk<br>
-        <select>
-          <option value="default">Quantity</option>
-          <option value="1">1</option>
-          <option value="3">3</option>
-          <option value="6">6</option>
-          <option value="12">12</option>
-        </select>
-      </li>
-
-      <li>Vanilla Milk<br>
-        <select>
-          <option value="default">Quantity</option>
-          <option value="1">1</option>
-          <option value="3">3</option>
-          <option value="6">6</option>
-          <option value="12">12</option>
-        </select>
-      </li>
-
-      <li class="dchoc">Double Chocolate<br>
-        <select>
-          <option value="default">Quantity</option>
-          <option value="1">1</option>
-          <option value="3">3</option>
-          <option value="6">6</option>
-          <option value="12">12</option>
-        </select>
-      </li>
-    </ul>
-
-    <span>
-      <h3>Total:</h3>
-      <div class="final-price">$59.85</div>
-    </span>
-
-    <button>Add to Cart</button>
-
-  </div>
-
-</div>
-
-    <!-- <h2>
-      TITLE HERE
-    </h2>
-    <div class="details-grid">
-      <div class="details-box a">Main image
-      </div>
-      <div class="details-box b">Other images
-      </div>
-      <div class="details-box c">Ingredients
-      </div>
-      <div class="details-box d">Reviews
-      </div>
-      <div class="details-box e">The Original
-      </div>
-      <div class="details-box f">Info text
-      </div>
-      <div class="details-box f">Select your glazes
-        <br> x <br> x <br>
-      </div>
-      <div class="details-box f">F
-      </div>
-    </div> -->
-
-  </body>
+</body>
 
   <!-- FOOTER -->
-  <footer>
-    <a href="#"><img src="Images/email-gray.png"> </a>
-    <a href="#"><img src="Images/instagram-gray.png" href="#"></a>
-    <a href="#"><img src="Images/facebook-gray.png" href="#"></a>
-  </footer>
+<footer>
+  <a href="#"><img src="Images/email-gray.png"> </a>
+  <a href="#"><img src="Images/instagram-gray.png" href="#"></a>
+  <a href="#"><img src="Images/facebook-gray.png" href="#"></a>
+</footer>
 </html>

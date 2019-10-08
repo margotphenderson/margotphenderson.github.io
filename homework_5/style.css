@@ -26,11 +26,11 @@ h2 {   /* Top of page text titles */
   padding: 10px;
   padding-top: 16px;
   margin: 0;
-  color: #7C7C7C;
+  color: #515151;
   font-family: "Bangla MN", sans-serif;
   font-weight: bold;
-  font-size: 25px;
-  text-transform: uppercase;
+  font-size: 26px;
+  /* text-transform: uppercase; */
 }
 
 /*********** HEADER ************/
@@ -116,14 +116,9 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover {
-  /* background-color: white; */
+nav a:hover, .active {
   font-weight: bold;
-}
-
-.active {
-  background-color: ;
-  font-weight: bold;
+  color: black;
 }
 
 /*********** HOME PAGE ************/
@@ -214,7 +209,7 @@ nav a:hover {
   margin-right:14%;
 }
 
-/**** LEFT SIDE ****/
+/******* LEFT SIDE ********/
 .left-side{
   float: left;
   width: 40%;
@@ -226,35 +221,69 @@ nav a:hover {
   font-size: 14px;
   font-weight: 300;
   padding: 10px;
-  /* padding-top: 16px; */
   margin: 0;
   padding-left: 0;
 }
 
 .main-image{
   width:100%;
-  /* border:2px solid white; */
   margin:0;
   padding:0;
 }
 
 .left-side span{
-  display: inline-block;
-  white-space:nowrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0px 1px;
   margin:0;
   padding:0;
-  transform: translate(0, -10%);
+  transform: translate(0, -14%);
+  width:100%;
+  margin-bottom: 30px;
 }
 
 .icing {
-  width:101px;
-  height: 75px;
-  /* border:1px solid white; */
-  margin:0;
-  padding:0;
+  width: 100%;
+  height: auto;
 }
 
-/**** RIGHT SIDE ****/
+.collapsible {
+  margin: auto;
+  padding-top: 5px;
+  width: 100%;
+  height: 35px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  font-family: "Bangla MN", sans-serif;
+  color: #7C7C7C;
+}
+
+.collapsible:hover {
+  font-weight: bold;
+  border-bottom: 1px solid black;
+}
+
+.arrow {
+  float: right;
+  font-size: 30px;
+  padding:0;
+  margin:0;
+  line-height: 1;
+}
+
+/* .content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  font-family: "Open Sans", sans-serif;
+  color: gray;
+} */
+
+/******* RIGHT SIDE *******/
 .right-side{
   float: right;
   width: 50%;
@@ -294,19 +323,30 @@ nav a:hover {
   padding-right:0;
 }
 
-
-/* .right-side ul {
-  display: flex;
-  justify-content: flex-start;
-  list-style: none;
-  left:0;
+span .pricing{
+  display: inline;
 }
-.right-side li {
-  flex: 1 1 1 1 100%;
-  padding: 0;
-  margin: auto;
-  padding-right: 20px;
-} */
+
+select{
+  width:120px;
+  height:40px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #515151;
+  /* background-color: white; */
+  text-align: center;
+  border-radius: 0;
+}
+
+select:hover {
+  /* background-color: #edcdc2; */
+  /* font-weight: 400; */
+  /* color: black; */
+  border: 1px solid black;
+}
+
+
 
 /*********** FOOTER ************/
 
