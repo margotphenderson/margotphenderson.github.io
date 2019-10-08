@@ -1,3 +1,17 @@
+/******* STYLE REFERENCES *******/
+
+/* Dark Grey*/
+  /* color: #515151; */
+/* Medium Grey */
+  /* color: #7C7C7C; */
+/* Neutral Pink */
+  /* background-color: #edcdc2; */
+
+/* Custom Title & Link Font */
+  /* font-family: "Bangla MN", sans-serif; */
+/* Regular & Descriptions Font */
+  /* font-family: "Open Sans", sans-serif; */
+
 /*********** EVERYTHING ************/
 
 @font-face {
@@ -165,7 +179,7 @@ nav a:hover, .active {
   /* border: 2px blue solid; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px 120px;
+  grid-gap: 30px 120px;
 }
 
 .box {
@@ -178,7 +192,7 @@ nav a:hover, .active {
 }
 
 .flavor-image {
-  width: 200px;
+  width: 100%;
   height: 125px;
   object-fit: cover;
 }
@@ -199,7 +213,15 @@ nav a:hover, .active {
   font-weight: 300;
   width: 200px;
   margin: auto;
+  padding-bottom: 10px;
   line-height:1.2;
+}
+
+.box:hover {
+  background-color: #edcdc2;
+
+  font-weight: bold;
+  color: black;
 }
 
 /*********** PRODUCT DETAILS ************/
@@ -242,7 +264,7 @@ nav a:hover, .active {
   margin-bottom: 30px;
 }
 
-.icing {
+.icing-img {
   width: 100%;
   height: auto;
 }
@@ -273,15 +295,6 @@ nav a:hover, .active {
   margin:0;
   line-height: 1;
 }
-
-/* .content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-  font-family: "Open Sans", sans-serif;
-  color: gray;
-} */
 
 /******* RIGHT SIDE *******/
 .right-side{
@@ -317,36 +330,61 @@ nav a:hover, .active {
   display: inline-block;
   width: auto;
   padding-right:20px;
+  color: #515151; /*Dark Gray*/
+  /* text-transform: uppercase; */
 }
 
 .dchoc{
   padding-right:0;
 }
 
-span .pricing{
-  display: inline;
+.right-side li:hover select {
+  color: black;
+  border: 1px solid black;
+}
+
+.right-side li:hover {
+  color:black;
 }
 
 select{
   width:120px;
-  height:40px;
+  height:35px;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight: 300;
-  color: #515151;
+  /* color: #515151; */
+  /* color: black; */
   /* background-color: white; */
   text-align: center;
+  border: 2px solid lightgray;
   border-radius: 0;
 }
 
-select:hover {
-  /* background-color: #edcdc2; */
-  /* font-weight: 400; */
-  /* color: black; */
-  border: 1px solid black;
+.pricing{
+  /* margin-top: 100px; */
+  display: inline;
+  font-size: 20px;
 }
 
+.addtocart{
+  width:240px;
+  height:60px;
+  background-color: #edcdc2;
+  color: #515151;
+  font-family: "Bangla MN", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: auto;
+  padding-top: 13px;
+}
 
+.addtocart:hover {
+  color: black;
+  border: 1px solid gray;
+  /* font-size: 18px; */
+}
 
 /*********** FOOTER ************/
 
