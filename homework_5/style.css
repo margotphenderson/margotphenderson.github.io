@@ -151,7 +151,7 @@ nav a:hover, .active {
   display: inline-block;
   position: relative;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   margin: auto;
   align: center;
   width: 625px;
@@ -163,11 +163,11 @@ nav a:hover, .active {
 }
 
 .intro-text {
-  color: #515151;
+  color: #7C7C7C;
   text-align: justify;
   padding: 60px;
   margin: auto;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 /*********** BROWSE PAGE ************/
@@ -219,8 +219,16 @@ nav a:hover, .active {
 
 .box:hover {
   background-color: #edcdc2;
-
   font-weight: bold;
+  color: black;
+}
+
+.box:hover .flavor {
+  font-weight: bold;
+  color: black;
+}
+
+.box:hover .flavor-desc {
   color: black;
 }
 
@@ -231,7 +239,7 @@ nav a:hover, .active {
   margin-right:14%;
 }
 
-/******* LEFT SIDE ********/
+/***** DETAILS: LEFT SIDE *****/
 .left-side{
   float: left;
   width: 40%;
@@ -286,6 +294,7 @@ nav a:hover, .active {
 .collapsible:hover {
   font-weight: bold;
   border-bottom: 1px solid black;
+  color: black;
 }
 
 .arrow {
@@ -296,24 +305,32 @@ nav a:hover, .active {
   line-height: 1;
 }
 
-/******* RIGHT SIDE *******/
+/***** DETAILS: RIGHT SIDE *****/
 .right-side{
   float: right;
   width: 50%;
 }
 
-.right-side h2{
-  text-align:left;
-  padding-top: 32px;
+.right-side h1{
+  padding-top: 15px;
   padding-bottom: 20px;
   margin-left:0;
   padding-left:0;
+  color: #7C7C7C;
 }
+
 .details-desc{
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   font-weight:300;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+h3{
+  padding-bottom:10px;
+  margin-bottom:0;
+  font-weight: bold;
 }
 
 .right-side ul{
@@ -345,6 +362,7 @@ nav a:hover, .active {
 
 .right-side li:hover {
   color:black;
+  font-weight: bold;
 }
 
 select{
@@ -383,21 +401,24 @@ select{
 .addtocart:hover {
   color: black;
   border: 1px solid gray;
-  /* font-size: 18px; */
 }
 
-/*********** FOOTER ************/
+/************** FOOTER ***************/
 
 footer {
   position: fixed;
   display: inline-block;
-  right: 0;
-  bottom: 0;
+  right: 10px;
+  bottom: 10px;
   margin: 0;
-  padding: 20px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-bottom: 0px;
+  background-color: white;
+  height: 40px;
 }
-/*** footer change for first page? ***/
+
 footer img{
   display: inline-block;
   padding: 5px;
