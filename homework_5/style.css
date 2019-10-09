@@ -47,7 +47,7 @@ h2 {   /* Top of page text titles */
   /* text-transform: uppercase; */
 }
 
-/*********** HEADER ************/
+/*********** HEADERS ************/
 header {
   text-align: center;
   background-color: white;
@@ -160,6 +160,12 @@ nav a:hover, .active {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.delivery-text{
+  text-align: center;
+  font-weight: bold;
+  color: #515151;
 }
 
 .intro-text {
