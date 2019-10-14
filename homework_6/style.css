@@ -40,10 +40,10 @@ h2 {   /* Top of page text titles */
   padding: 10px;
   padding-top: 16px;
   margin: 0;
-  color: #515151;
+  color: #7C7C7C;
   font-family: "Bangla MN", sans-serif;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 24px;
   /* text-transform: uppercase; */
 }
 
@@ -203,7 +203,7 @@ nav a:hover, .active {
   object-fit: cover;
 }
 
-.flavor {
+.flavor-title {
   color: #515151;
   font-family: "Bangla MN", sans-serif;
   font-size: 18px;
@@ -295,6 +295,7 @@ nav a:hover, .active {
   font-size: 16px;
   font-family: "Bangla MN", sans-serif;
   color: #7C7C7C;
+  background-color: white;
 }
 
 .collapsible:hover {
@@ -408,6 +409,127 @@ select{
   color: black;
   border: 1px solid gray;
 }
+
+/************** Cart ***************/
+
+/**** FlexBox ****/
+.progress-title{
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
+.progress{
+  flex: 20%;
+}
+.title{
+  flex: 80%;
+  margin-right:20%; /** to center on page **/
+}
+
+.flavor-glaze-quant{
+  display:flex;
+  width:70%;
+  margin:auto;
+  justify-content:space-between;
+}
+
+.new-item{
+  display:flex;
+  width:70%;
+  margin:auto;
+  align-items: center;
+  justify-content:space-between;
+  border-bottom: 1px solid #7C7C7C;
+}
+
+.remove{
+  display:inline-block;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+.item-thumbnail{
+  display:inline-block;
+  height:60px;
+  width:60px;
+  object-fit: cover;
+  vertical-align: middle;
+  margin:10px;
+}
+
+.calculate-price{
+  display:flex;
+  width:70%;
+  margin:auto;
+  /* flex-direction:column; */
+  justify-content:flex-end;
+  /* text-align: right; */
+  /* flex-wrap: wrap; */
+  align-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.light-italic{
+  border-bottom: 1px solid #7C7C7C;
+}
+
+
+/** Something wrong here **/
+.back-checkout{
+  display:flex;
+  width: 70%;
+  margin:auto;
+  text-align:right;
+  justify-content: space-between;
+}
+
+.backbutton{
+  display:flex;
+}
+
+.checkout{
+  display:flex;
+}
+
+.checkout .next-step{
+  width:260px;
+  height:60px;
+  background-color: #edcdc2;
+  color: #515151;
+  font-family: "Bangla MN", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: auto;
+  padding-top: 13px;
+}
+
+.next-step:hover {
+  color: black;
+  border: 1px solid gray;
+}
+
+/* .calculate-rolls{
+  display:flex;
+  flex: 0 50%;
+  width:70%;
+  margin:auto;
+  justify-content:flex-end;
+} */
+/* .calculate-tax{
+  display:flex;
+  width:70%;
+  margin:auto;
+  justify-content:flex-end;
+} */
+/* .calculate-delivery{
+  display:flex;
+  width:70%;
+  margin:auto;
+  justify-content:flex-end;
+} */
 
 /************** FOOTER ***************/
 
