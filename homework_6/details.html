@@ -38,21 +38,22 @@
     </nav>
   </header>
 
-
   <div id="details-page">
+
 <!--  LEFT SIDE -->
     <div class="left-side">
       <a href="browse.html">
         <div class="backbutton">&#60; See More Flavors</div>
       </a>
-
-      <img class="main-image" src="Images/original.jpg">
-      <span>
-        <img class="icing-img 1" src="Images/noicing.jpg">
-        <img class="icing-img 2" src="Images/sugarmilk.jpg">
-        <img class="icing-img 3" src="Images/vanillamilk.jpg">
-        <img class="icing-img 4" src="Images/doublechoc.jpg">
-      </span>
+      <!-- Big product image -->
+      <img id="main-image" src="Images/original.jpg">
+        <!-- Icing thumbnail images -->
+        <ul class="thumbnails">
+          <li><img class="icing-img 1" onclick="imageChange1()" src="Images/noicing.jpg"></li>
+          <li><img class="icing-img 2" onclick="imageChange2()" src="Images/sugarmilk.jpg"></li>
+          <li><img class="icing-img 3" onclick="imageChange3()" src="Images/vanillamilk.jpg"></li>
+          <li><img class="icing-img 4" onclick="imageChange4()" src="Images/doublechoc.jpg"></li>
+        </ul>
 
       <div class="under-images">
         <button type="button" class="collapsible">
@@ -61,7 +62,6 @@
             &#8964;
           </div>
         </button>
-
         <button type="button" class="collapsible">
           REVIEWS &nbsp;&#9733;&#9733;&#9733;&#9733;&#9734;
           <div class="arrow">
@@ -81,7 +81,7 @@
       <h3>Select Your Glazes:</h3>
       <ul  class="icing-options">
         <li>No Glaze<br>
-          <select id="quantNG" onchange="addQuant() + changePricing()">
+          <select id="quantNG" onchange="addQuant() + changePricing() + imageChange1()">
             <option value="0">Quantity</option>
             <option value="1">1</option>
             <option value="3">3</option>
@@ -91,7 +91,7 @@
         </li>
 
         <li>Sugar Milk<br>
-          <select id="quantSM" onchange="addQuant() + changePricing()">
+          <select id="quantSM" onchange="addQuant() + changePricing() + imageChange2()">
             <option value="0">Quantity</option>
             <option value="1">1</option>
             <option value="3">3</option>
@@ -101,7 +101,7 @@
         </li>
 
         <li>Vanilla Milk<br>
-          <select id="quantVM" onchange="addQuant() + changePricing()">
+          <select id="quantVM" onchange="addQuant() + changePricing() + imageChange3()">
             <option value="0">Quantity</option>
             <option value="1">1</option>
             <option value="3">3</option>
@@ -111,7 +111,7 @@
         </li>
 
         <li class="dchoc">Double Chocolate<br>
-          <select id="quantDC" onchange="addQuant() + changePricing()">
+          <select id="quantDC" onchange="addQuant() + changePricing() + imageChange4()">
             <option value="0">Quantity</option>
             <option value="1">1</option>
             <option value="3">3</option>
@@ -130,7 +130,10 @@
         <div id="pagePrice" value="0">0.00</div>
       </span>
       <br>
-      <button class="addtocart" onclick="addToCart()" type="button" class="shop-item-button">Add to Cart</button>
+      <button class="addtocart" onclick="addToCart() + imageChange5()" type="button" class="shop-item-button">Add to Cart</button>
+      <a href="cart.html">
+        <div id="alert"></div>
+      </a>
 
     </div>
   </div>

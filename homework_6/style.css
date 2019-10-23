@@ -151,6 +151,7 @@ nav a {
 nav a:hover, .active {
   font-weight: bold;
   color: black;
+  cursor: pointer;
 }
 
 /*********** HOME PAGE ************/
@@ -245,15 +246,18 @@ nav a:hover, .active {
   background-color: #edcdc2;
   font-weight: bold;
   color: black;
+  cursor: pointer;
 }
 
 .box:hover .flavor {
   font-weight: bold;
   color: black;
+  cursor: pointer;
 }
 
 .box:hover .flavor-desc {
   color: black;
+  cursor: pointer;
 }
 
 /*********** PRODUCT DETAILS ************/
@@ -279,21 +283,34 @@ nav a:hover, .active {
   padding-left: 0;
 }
 
-.main-image{
+#main-image{
   width:100%;
+  height:270px;
+  object-fit:cover;
   margin:0;
   padding:0;
 }
 
-.left-side span{
+.left-side ul{
+  list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 0px 1px;
-  margin:0;
-  padding:0;
-  transform: translate(0, -14%);
+  grid-gap: 2px;
+  margin: auto;
+  padding: 0;
+  transform: translate(0, -12%);
   width:100%;
   margin-bottom: 30px;
+}
+
+.left-side li{
+  margin:0;
+  padding:0;
+}
+
+.left-side .icing-img:hover{
+  border: 1px solid lightgray;
+  cursor: pointer;
 }
 
 .icing-img {
@@ -320,6 +337,7 @@ nav a:hover, .active {
   font-weight: bold;
   border-bottom: 1px solid black;
   color: black;
+  cursor: pointer;
 }
 
 .arrow {
@@ -373,7 +391,6 @@ h3{
   width: auto;
   padding-right:20px;
   color: #515151; /*Dark Gray*/
-  /* text-transform: uppercase; */
 }
 
 .dchoc{
@@ -383,11 +400,13 @@ h3{
 .right-side li:hover select {
   color: black;
   border: 1px solid black;
+  cursor: pointer;
 }
 
 .right-side li:hover {
   color:black;
   font-weight: bold;
+  cursor: pointer;
 }
 
 select{
@@ -426,10 +445,40 @@ select{
   margin: auto;
   padding-top: 13px;
 }
-
+/* Add to Cart button behaviors */
 .addtocart:hover {
   color: black;
   border: 1px solid gray;
+  outline: none;
+  cursor: pointer;
+}
+.addtocart:active {
+  background-color: #ebc9be;
+  color: black;
+  border: 1px solid lightgray;
+  background-color: #edc6b9;
+}
+/* remove weird orange outline from selected buttons & dropdowns */
+button:focus {
+  outline: none;
+}
+select:focus {
+  outline: none;
+}
+/* darken when clicked */
+/* .addtocart:active {
+  background-color: #edc6b9;
+} */
+/* added to cart message after clicking button */
+#alert{
+  display: inline-block;
+  margin: auto;
+  margin-left: 130px;
+  color: #7C7C7C;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
 }
 
 /************** Cart ***************/
@@ -546,6 +595,7 @@ select{
 .next-step:hover {
   color: black;
   border: 1px solid gray;
+  cursor: pointer;
 }
 
 /* .back-checkout{
@@ -579,4 +629,8 @@ footer img{
   filter: brightness(180%);
   height: 30px;
   width: auto;
+}
+
+footer img:hover{
+  cursor: pointer;
 }

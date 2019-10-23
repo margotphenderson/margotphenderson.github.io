@@ -49,17 +49,14 @@ function addQuant(){
   } else if(quantDC == "12"){
     orderQuant = orderQuant + 12;
   }
-  // console.log("Final orderQuant is " + orderQuant);
 }
 
 // Add new buns to cart number = orderQuant + old cartNumber = new cartNumber
 function addToCart() {
-  // console.log("order quant " + orderQuant);
   if (orderQuant==0){
     document.getElementsByClassName("addtocart").disabled=true;
   } else {
     cartNumber = parseInt(document.getElementById("cartNumber").innerHTML);
-
     console.log(cartNumber + " buns in the cart + " + orderQuant + " in new order =");
     cartNumber = cartNumber + orderQuant;
     document.getElementById("cartNumber").innerHTML = cartNumber;
@@ -74,10 +71,11 @@ function addToCart() {
     pricing = 0.00;
     document.getElementById("pagePrice").innerHTML = "0.00";
     console.log("--- Reset for new order ---");
+    document.getElementById("alert").innerHTML = "Added to cart!";
   }
 }
 
-// Change pricing above Add to Cart button
+// Change pricing above "Add to Cart" button
 function changePricing(){
   pricing = 0.00;
   document.getElementById("pagePrice").innerHTML = "0.00";
@@ -86,28 +84,31 @@ function changePricing(){
 
   console.log(document.getElementById("pagePrice"));
 
-//Calculates quantity * $3.99
+  //Calculates quantity * $3.99
   pricing = orderQuant * 3.95;
   console.log("orderQuant = " + orderQuant);
   console.log(orderQuant + " * $3.95 = " + pricing);
 
-//Updates pricing text on page
+  //Updates pricing text on page
   document.getElementById("pagePrice").innerHTML = pricing.toFixed(2);
-
-  // pricing = 0;
-  // orderQuant = 0;
-  // console.log("--- Reset for new quantities ---");
 }
 
-
-// Click thumbnails to change larger image
-// function imageChange(){
-//   var mainImage = document.getElementbyClassName("main-image");
-//   var thumbnail = document.getElementbyClassName("icing-img");
-//   if mainImage.onclick = thumbnail;
-//   document.getElementbyClassName("main-image").onclick =
-// }
-
+// Click icing thumbnails & quantity to change larger image
+function imageChange1(){
+  document.getElementById('main-image').setAttribute("src", "Images/noicing.jpg")
+}
+function imageChange2(){
+  document.getElementById('main-image').setAttribute("src", "Images/sugarmilk.jpg")
+}
+function imageChange3(){
+  document.getElementById('main-image').setAttribute("src", "Images/vanillamilk.jpg")
+}
+function imageChange4(){
+  document.getElementById('main-image').setAttribute("src", "Images/doublechoc.jpg")
+}
+function imageChange5(){
+  document.getElementById('main-image').setAttribute("src", "Images/original.jpg")
+}
 
 //   sessionStorage.setItem('key', 'value');
 // sessionStorage.addToCart()
