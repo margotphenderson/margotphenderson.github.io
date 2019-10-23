@@ -35,6 +35,11 @@ body {
   color: #7C7C7C;
 }
 
+p{
+  font-family: "Bangla MN", sans-serif;
+  color: #7C7C7C;
+}
+
 h2 {   /* Top of page text titles */
   text-align: center;
   padding: 10px;
@@ -111,6 +116,19 @@ h1 span{   /* Logo:  BunBun */
 #cart img{
   width: 45px;
   height: auto;
+}
+
+#cartNumber {
+  font-family: "Bangla MN", sans-serif;
+  color: white;
+  display: inline-block;
+  z-index: 2;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  top: 36px;
+  right: 40px;
 }
 
 nav {
@@ -390,6 +408,10 @@ select{
   /* margin-top: 100px; */
   display: inline;
   font-size: 20px;
+}
+
+#pagePrice{
+  display: inline;
 }
 
 .addtocart{
