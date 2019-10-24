@@ -57,10 +57,10 @@ function addToCart() {
     document.getElementsByClassName("addtocart").disabled=true;
   } else {
     cartNumber = parseInt(document.getElementById("cartNumber").innerHTML);
-    console.log(cartNumber + " buns in the cart + " + orderQuant + " in new order =");
+    // console.log(cartNumber + " buns in the cart + " + orderQuant + " in new order =");
     cartNumber = cartNumber + orderQuant;
     document.getElementById("cartNumber").innerHTML = cartNumber;
-    console.log(cartNumber + " buns in the cart now.");
+    // console.log(cartNumber + " buns in the cart now.");
 
     // Reset all dropdowns & orderQuant after "Add to Cart"
     document.getElementById("quantNG").value = 0;
@@ -70,7 +70,7 @@ function addToCart() {
     orderQuant = 0;
     pricing = 0.00;
     document.getElementById("pagePrice").innerHTML = "0.00";
-    console.log("--- Reset for new order ---");
+    // console.log("--- Reset for new order ---");
     document.getElementById("alert").innerHTML = "Added to cart!";
   }
 }

@@ -483,50 +483,146 @@ select:focus {
 
 /************** Cart ***************/
 
-/**** FlexBox ****/
-.progress-title{
-  display: flex;
-  width: 70%;
-  margin: auto;
+.back-buttons-cart {
+  position:absolute;
+  left:15%;
+  top:22%;
 }
-.progress{
-  flex: 20%;
+
+.progress img{
+  height: 170px;
+  width: 500px;
+  /* width: auto; */
+  padding:0;
+  margin:0;
+  position:absolute;
+  top: 17%;
+  left:12%;
 }
+
+#progress-cart a{
+  display:inline-block;
+  position:absolute;
+  left:238px;
+  top: 207px;
+  color: #515151;
+  /* font-family: "Open Sans", sans-serif; */
+  font-size: 13px;
+}
+
+#progress-delivery a{
+  display:inline-block;
+  position:absolute;
+  left:332px;
+  top: 207px;
+  color: #515151;
+  /* font-family: "Open Sans", sans-serif; */
+  font-size: 13px;
+}
+
+#progress-billing a{
+  display:inline-block;
+  position:absolute;
+  left:433px;
+  top: 207px;
+  color: #515151;
+  /* font-family: "Open Sans", sans-serif; */
+  font-size: 13px;
+}
+
 .title{
-  flex: 80%;
-  margin-right:20%; /** to center on page **/
+  /* flex: 80%; */
+  /* margin-right:20%; /** to center on page **/ */
+  /* margin-bottom: 70px; */
+  text-align:center;
 }
 
 .flavor-glaze-quant{
   display:flex;
   width:70%;
   margin:auto;
+  margin-top: 25px;
   justify-content:space-between;
+  color: #515151;
+  padding:0;
 }
 
 .new-item{
   display:flex;
   width:70%;
+  height:50px;
+  padding-bottom:30px;
   margin:auto;
   align-items: center;
   justify-content:space-between;
-  border-bottom: 1px solid #7C7C7C;
+  border-bottom: 1px solid lightgray;
 }
 
+.new-item select{
+  width:150px;
+}
+
+.flavor-glaze-quant .empty-left{
+    width:20%;
+    text-align: center;
+}
+.flavor-glaze-quant .flavor{
+    width:20%;
+    text-align: center;
+    text-decoration: underline;
+    /* border-bottom: 1px solid lightgray; */
+}
+.flavor-glaze-quant .glaze{
+    width:20%;
+    text-align: center;
+    text-decoration: underline;
+}
+.flavor-glaze-quant .quantity{
+    width:20%;
+    text-align: center;
+    text-decoration: underline;
+}
+.flavor-glaze-quant .empty-right{
+    width:20%;
+    text-align: center;
+}
+
+.remove-thumbnail{
+      flex-grow: 1;
+      text-align: left;
+}
 .remove{
   display:inline-block;
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
+  color: lightgray;
 }
-
 .item-thumbnail{
+  flex-grow: 1;
   display:inline-block;
   height:60px;
   width:60px;
   object-fit: cover;
   vertical-align: middle;
   margin:10px;
+}
+
+.item-flavor{
+  width:20%;
+  text-align: center;
+}
+.item-glaze{
+  width:20%;
+  text-align: center;
+}
+.item-quantity{
+  width:20%;
+  text-align: center;
+}
+.item-price{
+  width:20%;
+  text-align: right;
 }
 
 .calculate-price{
@@ -545,38 +641,47 @@ select:focus {
 
 .price-right{
   width:30%;
+  text-align: center;
+  margin:auto;
 }
 
 .calculate-rolls{
   display:flex;
   justify-content: space-between;
   height:20px;
+  font-size: 14px;
 }
 .calculate-tax{
   display:flex;
   justify-content: space-between;
   height:20px;
+  font-size: 14px;
 }
 .calculate-delivery{
   display:flex;
   justify-content: space-between;
   height:20px;
+  font-size: 14px;
 }
 
-.disclaimer{
-  border-bottom: 1px solid #7C7C7C;
-  color: gray;
+#disclaimer{
+  border-bottom: 1px solid lightgray;
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   font-style: italic;
   font-weight: 300;
+  color: gray;
   margin-top:20px;
+  padding-bottom:30px;
+  text-align: left;
 }
 
 .calculate-total{
   display:flex;
   justify-content: space-between;
   height:50px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .next-step{

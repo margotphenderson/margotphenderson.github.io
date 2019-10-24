@@ -38,14 +38,30 @@
     </nav>
   </header>
 
-    <div class="progress-title">
-      <div class="progress">
-        <p>(Progress bar)</p>
-      </div>
+    <div class="back-buttons-cart">
+      <a href="browse.html">
+        <div class="backbutton">&#60; Browse More Flavors</div>
+      </a>
+    </div>
+
+    <div class="progress">
+      <img src="Images/progressbar.png">
+    </div>
+    <div id="progress-cart">
+      <a href="cart.html">CART</a>
+    </div>
+    <div id="progress-delivery">
+      <a href="#">DELIVERY</a>
+    </div>
+    <div id="progress-billing">
+      <a href="#">BILLING</a>
+    </div>
+
+    <!-- <div class="progress-title"> -->
       <div class="title">
         <h2>My Cart</h2>
       </div>
-    </div>
+    <!-- </div> -->
 
     <div class="flavor-glaze-quant">
       <div class="empty-left">
@@ -97,12 +113,11 @@
         </select>
       </div>
       <div class="item-price">
-        <p>$ XX.XX</p>
+        <p>$&nbsp; XX.XX</p>
       </div>
     </div>
-
 <!-- pricing and delivery fees -->
-
+    <br>
     <div class="calculate-price">
 
       <!--empty left space-->
@@ -117,7 +132,7 @@
             <p>Rolls (XX) :</p>
           </div>
           <div class="cost-rolls">
-            <p>$ XX.XX</p>
+            <p>$&nbsp; XX.XX</p>
           </div>
         </div>
 
@@ -126,7 +141,7 @@
             <p>Tax :</p>
           </div>
           <div class="cost-tax">
-            <p>$ X.XX</p>
+            <p>$&nbsp;&nbsp;&nbsp;X.XX</p>
           </div>
         </div>
 
@@ -135,12 +150,12 @@
             <p>Delivery Fee :</p>
           </div>
           <div class="cost-delivery">
-            <p>$ X.XX</p>
+            <p>$&nbsp;&nbsp;&nbsp;X.XX</p>
           </div>
         </div>
 
-        <div class="disclaimer">
-          <p>Select delivery time at checkout.</p>
+        <div id="disclaimer">
+          Select delivery time at checkout.
         </div>
         <!-- underline -->
 
@@ -149,7 +164,7 @@
             <p>Total :</p>
           </div>
           <div class="cost-total">
-            <p>$ XX.XX</p>
+            <p>$&nbsp; XX.XX</p>
           </div>
         </div>
 
