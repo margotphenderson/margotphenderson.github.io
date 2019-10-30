@@ -597,21 +597,32 @@ select:focus {
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
   color: lightgray;
+  margin-left: 30px;
 }
 
 #item-thumbnail{
   flex-grow: 1;
   display:inline-block;
-  height:60px;
-  width:60px;
+  height:50px;
+  width:75px;
   object-fit: cover;
   vertical-align: middle;
   margin:10px;
+  margin-left: 38px;
+  border: 1px solid lightgray;
 }
 
-.item-flavor{
+.item-flavor p{
   width:20%;
   text-align: center;
+  text-align: left;
+  vertical-align: bottom;
+  padding: 0;
+  padding-top: 15px;
+  margin: 0;
+  width: 150px;
+  height: 35px;
+  font-size: 16px;
 }
 .item-glaze{
   width:20%;

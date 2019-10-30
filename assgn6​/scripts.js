@@ -1,4 +1,13 @@
-// ------------  DETAILS PAGE ------------ //
+// Cart Page:  Load existing order (if any) from local storage
+function loadCart(){
+  if(localStorage.getItem(" ") != null){
+    var myCart = JSON.parse(localStorage.getItem("myCart"));
+  }
+  else{
+    var myCart = [];
+  }
+}
+
 var quantNG; //number no glaze (selected on details page)
 var quantSM; //number sugar milk (selected on details page)
 var quantVM; //number vanilla milk (selected on details page)
@@ -7,7 +16,7 @@ var orderQuant = 0; //number of buns to add to existing cart (from details page)
 var cartNumber; //number buns currently in cart
 var pricing = 0.00; //total cost of buns, on details page
 
-// Add together all glaze quantities = orderQuant
+// Details Page:  Add together all glaze quantities = orderQuant
 function addQuant(){
   orderQuart = 0;
   quantNG = document.getElementById("quantNG").value;
@@ -52,58 +61,76 @@ function addQuant(){
   }
 }
 
-function OriginalBun(flavor, glaze, quantity){
+
+// Cart Page:  New buns addition
+function originalBun(glaze, quantity){
   this.flavor = "Original Bun";
   this.glaze = glaze;
   this.quantity = quantity;
+  this.image = "Images/noicing.jpg";
 }
 
-var buns = {
-}
-
-
-// Add new buns to cart number = orderQuant + old cartNumber = new cartNumber
 function addToCart() {
+  // Details Page: Add new buns to cart number = orderQuant + old cartNumber = new cartNumber
   if (orderQuant==0){
     document.getElementsByClassName("addtocart").disabled=true;
   } else {
     cartNumber = parseInt(document.getElementById("cartNumber").innerHTML);
-    // console.log(cartNumber + " buns in the cart + " + orderQuant + " in new order =");
     cartNumber = cartNumber + orderQuant;
     document.getElementById("cartNumber").innerHTML = cartNumber;
-    // console.log(cartNumber + " buns in the cart now.");
-
-    // Add bun glazes, quantities, and costs(?) to My Cart
 
 
-    // Reset all dropdowns & orderQuant after "Add to Cart"
-    document.getElementById("quantNG").value = 0;
-    document.getElementById("quantSM").value = 0;
-    document.getElementById("quantVM").value = 0;
-    document.getElementById("quantDC").value = 0;
-    orderQuant = 0;
-    pricing = 0.00;
-    document.getElementById("pagePrice").innerHTML = "0.00";
-    // console.log("--- Reset for new order ---");
-    document.getElementById("alert").innerHTML = "Added to cart!";
+  // Cart Page:  Add bun glazes & quantities to My Cart ...  (flavor is static; cost per quantity is static)
+  if (document.getElementById("quantNG").value != "0"){
+    new originalBun("No Glaze", document.getElementById("quantNG").value); //Turn into integer for .value?
+    console.log("No Glaze x" + document.getElementById("quantNG").value);
+  }
+  if (document.getElementById("quantSM").value != "0"){
+    new originalBun("Sugar Milk", document.getElementById("quantSM").value); //Turn into integer for .value?
+    console.log("Sugar Milk x" + document.getElementById("quantSM").value);
+  }
+  if (document.getElementById("quantVM").value != "0"){
+    new originalBun("Vanilla Milk", document.getElementById("quantVM").value); //Turn into integer for .value?
+    console.log("Vanilla Milk x" + document.getElementById("quantVM").value);
+  }
+  if (document.getElementById("quantDC").value != "0"){
+    new originalBun("Double Chocolate", document.getElementById("quantDC").value); //Turn into integer for .value?
+    console.log("Double Chocolate x" + document.getElementById("quantDC").value);
+    }
+
+  // Details Page:  Reset all dropdowns & orderQuant after "Add to Cart"
+  document.getElementById("quantNG").value = 0;
+  document.getElementById("quantSM").value = 0;
+  document.getElementById("quantVM").value = 0;
+  document.getElementById("quantDC").value = 0;
+  orderQuant = 0;
+  pricing = 0.00;
+  document.getElementById("pagePrice").innerHTML = "0.00";
+  document.getElementById("alert").innerHTML = "Added to cart!";
   }
 }
-// Change pricing above "Add to Cart" button
+
+
+// Cart Page:  Clone item line in cart for new addition
+// var allItems = document.getElementById("all-items");
+// var newItem = document.getElementById("new-item");
+// var clone = newItem.cloneNode(true);
+// allItems.appendChild(clone);
+
+
+// Details Page:  Change pricing above "Add to Cart" button
 function changePricing(){
   pricing = 0.00;
   document.getElementById("pagePrice").innerHTML = "0.00";
   orderQuant = 0;
   addQuant();
-  console.log(document.getElementById("pagePrice"));
-  //Calculates quantity * $3.99
+  //Calculates quantity * $3.95
   pricing = orderQuant * 3.95;
-  console.log("orderQuant = " + orderQuant);
-  console.log(orderQuant + " * $3.95 = " + pricing);
   //Updates pricing text on page
   document.getElementById("pagePrice").innerHTML = pricing.toFixed(2);
 }
 
-// Click icing thumbnails & quantity to change larger image
+// Details Page:  Click icing thumbnails & quantity to change larger image
 function imageChange1(){
   document.getElementById('main-image').setAttribute("src", "Images/noicing.jpg")
 }
@@ -120,19 +147,8 @@ function imageChange5(){
   document.getElementById('main-image').setAttribute("src", "Images/original.jpg")
 }
 
-// ------------  CART PAGE ------------ //
 
 
-
-// Clone item line in cart for new addition
-var allItems = document.getElementById("all-items");
-var newItem = document.getElementById("new-item");
-var clone = newItem.cloneNode(true);
-allItems.appendChild(clone);
-
-function loadCart(){
-  if(localStorage.getItem(" ") != null)
-}
 
 
 
