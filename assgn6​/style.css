@@ -598,7 +598,7 @@ select:focus {
   font-size: 20px;
   color: lightgray;
 }
-.item-thumbnail{
+#item-thumbnail{
   flex-grow: 1;
   display:inline-block;
   height:60px;

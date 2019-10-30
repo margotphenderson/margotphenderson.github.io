@@ -110,6 +110,11 @@ function imageChange5(){
   document.getElementById('main-image').setAttribute("src", "Images/original.jpg")
 }
 
+function imageChangeCart(){
+  document.getElementById('item-thumbnail').setAttribute("src", "Images/" + ".item-glaze.value")
+  // DOESN'T WORK YET
+}
+
 //   sessionStorage.setItem('key', 'value');
 // sessionStorage.addToCart()
 

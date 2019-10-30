@@ -84,7 +84,7 @@
         <div class="remove"
           <p>X &nbsp;&nbsp;</p>
         </div>
-        <img class="item-thumbnail" src="Images/noicing.jpg">
+        <img id="item-thumbnail" src="Images/noicing.jpg">
       </div>
       <div class="item-flavor">
             <select>
@@ -96,12 +96,12 @@
               <option value="glutenfree">Gluten-Free</option>
             </select>
       </div>
-      <div class="item-glaze">
+      <div class="item-glaze" onchange="imageChangeCart()">
         <select>
           <option value="noglaze">No Glaze</option>
           <option value="sugarmilk">Sugar Milk</option>
           <option value="vanillamilk">Vanilla Milk</option>
-          <option value="dchoc">Double Chocolate</option>
+          <option value="doublechoc">Double Chocolate</option>
         </select>
       </div>
       <div class="item-quantity">
@@ -175,17 +175,6 @@
 
       </div>
     </div>
-
-    <!-- <div class="back-checkout"
-
-      <div class="backbutton">
-        <a href="browse.html">
-          <div class="backbutton">
-            <p>&#60; Browse More Flavors
-            </p>
-          </div>
-        </a>
-      </div> -->
 
   </body>
 
