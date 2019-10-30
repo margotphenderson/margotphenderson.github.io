@@ -1,10 +1,11 @@
-var quantNG; //number no glaze
-var quantSM; //number sugar milk
-var quantVM; //number vanilla milk
-var quantDC; //number double choc
-var orderQuant = 0; //number buns to add to existing cart
-var cartNumber; //number buns in cart
-var pricing = 0.00; //total cost of buns on details page
+// ------------  DETAILS PAGE ------------ //
+var quantNG; //number no glaze (selected on details page)
+var quantSM; //number sugar milk (selected on details page)
+var quantVM; //number vanilla milk (selected on details page)
+var quantDC; //number double choc (selected on details page)
+var orderQuant = 0; //number of buns to add to existing cart (from details page)
+var cartNumber; //number buns currently in cart
+var pricing = 0.00; //total cost of buns, on details page
 
 // Add together all glaze quantities = orderQuant
 function addQuant(){
@@ -51,6 +52,16 @@ function addQuant(){
   }
 }
 
+function OriginalBun(flavor, glaze, quantity){
+  this.flavor = "Original Bun";
+  this.glaze = glaze;
+  this.quantity = quantity;
+}
+
+var buns = {
+}
+
+
 // Add new buns to cart number = orderQuant + old cartNumber = new cartNumber
 function addToCart() {
   if (orderQuant==0){
@@ -61,6 +72,9 @@ function addToCart() {
     cartNumber = cartNumber + orderQuant;
     document.getElementById("cartNumber").innerHTML = cartNumber;
     // console.log(cartNumber + " buns in the cart now.");
+
+    // Add bun glazes, quantities, and costs(?) to My Cart
+
 
     // Reset all dropdowns & orderQuant after "Add to Cart"
     document.getElementById("quantNG").value = 0;
@@ -74,21 +88,17 @@ function addToCart() {
     document.getElementById("alert").innerHTML = "Added to cart!";
   }
 }
-
 // Change pricing above "Add to Cart" button
 function changePricing(){
   pricing = 0.00;
   document.getElementById("pagePrice").innerHTML = "0.00";
   orderQuant = 0;
   addQuant();
-
   console.log(document.getElementById("pagePrice"));
-
   //Calculates quantity * $3.99
   pricing = orderQuant * 3.95;
   console.log("orderQuant = " + orderQuant);
   console.log(orderQuant + " * $3.95 = " + pricing);
-
   //Updates pricing text on page
   document.getElementById("pagePrice").innerHTML = pricing.toFixed(2);
 }
@@ -110,10 +120,28 @@ function imageChange5(){
   document.getElementById('main-image').setAttribute("src", "Images/original.jpg")
 }
 
-function imageChangeCart(){
-  document.getElementById('item-thumbnail').setAttribute("src", "Images/" + ".item-glaze.value")
-  // DOESN'T WORK YET
+// ------------  CART PAGE ------------ //
+
+
+
+// Clone item line in cart for new addition
+var allItems = document.getElementById("all-items");
+var newItem = document.getElementById("new-item");
+var clone = newItem.cloneNode(true);
+allItems.appendChild(clone);
+
+function loadCart(){
+  if(localStorage.getItem(" ") != null)
 }
+
+
+
+
+// Change thumbnail image when icing dropdown is changed.
+// function imageChangeCart(){
+//   document.getElementById('item-thumbnail').setAttribute("src", "Images/" + ".item-glaze.value")
+//   // DOESN'T WORK YET
+// }
 
 //   sessionStorage.setItem('key', 'value');
 // sessionStorage.addToCart()

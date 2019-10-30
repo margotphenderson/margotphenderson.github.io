@@ -9,9 +9,9 @@
 </head>
 
 <!-- BODY -->
-<body>
+<body onload="loadCart()">
 
-  <!-- HEADER & NAV BAR -->
+  <!-- ...........HEADER & NAV BAR........... -->
   <header>
     <div id="header-background">
       <img src="Images/header-bg3.jpg">
@@ -79,63 +79,84 @@
       </div>
     </div>
 
-    <div class="new-item">
-      <div class="remove-thumbnail">
-        <div class="remove"
-          <p>X &nbsp;&nbsp;</p>
+    <!-- ...........ITEMS IN CART........... -->
+    <div id="all-items">
+
+      <div id="new-item" class="new-item">
+        <div class="remove-thumbnail">
+
+          <!-- cancel item -->
+          <div class="remove">
+            <a id="cancel">X &nbsp;&nbsp; </a>
+          </div>
+
+          <!-- item thumbnail -->
+          <img id="item-thumbnail" src="Images/noicing.jpg">
         </div>
-        <img id="item-thumbnail" src="Images/noicing.jpg">
-      </div>
-      <div class="item-flavor">
-            <select>
-              <option value="original">Original</option>
-              <option value="caramelpecan">Caramel Pecan</option>
-              <option value="walnut">Walnut</option>
-              <option value="pumpkinspice">Pumpkin Spice</option>
-              <option value="blackberry">Blackberry</option>
-              <option value="glutenfree">Gluten-Free</option>
-            </select>
-      </div>
-      <div class="item-glaze" onchange="imageChangeCart()">
-        <select>
-          <option value="noglaze">No Glaze</option>
-          <option value="sugarmilk">Sugar Milk</option>
-          <option value="vanillamilk">Vanilla Milk</option>
-          <option value="doublechoc">Double Chocolate</option>
-        </select>
-      </div>
-      <div class="item-quantity">
-        <select>
-          <option value="1">1</option>
-          <option value="3">3</option>
-          <option value="6">6</option>
-          <option value="12">12</option>
-        </select>
-      </div>
-      <div class="item-price">
-        <p>$&nbsp; XX.XX</p>
+
+        <!-- flavor dropdown -->
+        <div class="item-flavor">
+              <select>
+                <option value="original">Original</option>
+                <option value="caramelpecan">Caramel Pecan</option>
+                <option value="walnut">Walnut</option>
+                <option value="pumpkinspice">Pumpkin Spice</option>
+                <option value="blackberry">Blackberry</option>
+                <option value="glutenfree">Gluten-Free</option>
+              </select>
+        </div>
+        <!-- glaze dropdown -->
+        <div class="item-glaze" onchange="imageChangeCart()">
+          <select>
+            <option value="noglaze">No Glaze</option>
+            <option value="sugarmilk">Sugar Milk</option>
+            <option value="vanillamilk">Vanilla Milk</option>
+            <option value="doublechoc">Double Chocolate</option>
+          </select>
+        </div>
+        <!-- quantity dropdown -->
+        <div class="item-quantity">
+          <select>
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="6">6</option>
+            <option value="12">12</option>
+          </select>
+        </div>
+
+        <!-- item price -->
+        <div class="item-price">
+          <p>$&nbsp; XX.XX</p>
+        </div>
       </div>
     </div>
-<!-- pricing and delivery fees -->
-    <br>
-    <div class="calculate-price">
 
+    <br>
+    <!-- Pricing and delivery fees -->
+    <div class="calculate-price">
       <!--empty left space-->
       <div class="price-left-empty">
       </div>
 
-      <!--calculating total price-->
+      <!-- Pricing calculations section-->
       <div class="price-right">
-
+        <!--  -->
         <div class="calculate-rolls">
+          <!-- # of rolls total -->
           <div class="rolls-number">
             <p>Rolls (XX) :</p>
+            <!-- <p>Rolls (</p>
+            ...call var cartNumber...
+            <p>) :</p>-->
           </div>
+
+          <!-- cost of # rolls -->
           <div class="cost-rolls">
             <p>$&nbsp; XX.XX</p>
           </div>
         </div>
 
+        <!-- calculate tax -->
         <div class="calculate-tax">
           <div class="tax">
             <p>Tax :</p>
@@ -145,12 +166,13 @@
           </div>
         </div>
 
+        <!-- consistent $5 delivery anywhere in Pittsburgh -->
         <div class="calculate-delivery">
           <div class="delivery-fee">
             <p>Delivery Fee :</p>
           </div>
           <div class="cost-delivery">
-            <p>$&nbsp;&nbsp;&nbsp;X.XX</p>
+            <p>$&nbsp;&nbsp;&nbsp;5.00</p>
           </div>
         </div>
 
@@ -158,8 +180,8 @@
           Select delivery time at checkout.
         </div>
         <!-- underline -->
-
         <div class="calculate-total">
+          <!-- calculate total cost of cart & fees -->
           <div class="total">
             <p>Total :</p>
           </div>
@@ -178,7 +200,7 @@
 
   </body>
 
-  <!-- FOOTER -->
+  <!-- ...........FOOTER........... -->
   <footer>
     <a href="#"><img src="Images/email-gray.png"> </a>
     <a href="#"><img src="Images/instagram-gray.png" href="#"></a>
