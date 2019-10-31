@@ -1,10 +1,29 @@
 // Cart Page:  Load existing order (if any) from local storage
+// localStorage.setItem("myCart", JSON.stringify(myCart));
+
 function loadCart(){
-  if(localStorage.getItem(" ") != null){
-    var myCart = JSON.parse(localStorage.getItem("myCart"));
+  if(localStorage.getItem("myCart") != null){
+    var myCart = JSON.parse(localStorage.getItem("myCart")); //get existing myCart array from localStorage
   }
   else{
-    var myCart = [];
+    var myCart = []; // start an empty myCart array
+  }
+  for (i=0; i<myCart.length; i++){
+    var bunItem = myCart[i];
+    //if (i===0){
+      
+      document.getElementById("item-glaze").innerHTML=bunItem.glaze; // .value or .innerHTML ?
+      document.getElementById("item-quantity").innerHTML=bunItem.quantity;
+    //}
+  }
+}
+
+function loadDetails(){
+  if(localStorage.getItem("myCart") != null){
+    var myCart = JSON.parse(localStorage.getItem("myCart")); //get existing myCart array from localStorage
+  }
+  else{
+    var myCart = []; // start an empty myCart array
   }
 }
 
@@ -16,7 +35,7 @@ var orderQuant = 0; //number of buns to add to existing cart (from details page)
 var cartNumber; //number buns currently in cart
 var pricing = 0.00; //total cost of buns, on details page
 
-// Details Page:  Add together all glaze quantities = orderQuant
+// Details Page:  Add all glaze quantities = orderQuant
 function addQuant(){
   orderQuart = 0;
   quantNG = document.getElementById("quantNG").value;
@@ -61,8 +80,7 @@ function addQuant(){
   }
 }
 
-
-// Cart Page:  New buns addition
+// Cart Page:  add a new Original Bun
 function originalBun(glaze, quantity){
   this.flavor = "Original Bun";
   this.glaze = glaze;
@@ -70,7 +88,14 @@ function originalBun(glaze, quantity){
   this.image = "Images/noicing.jpg";
 }
 
+
 function addToCart() {
+  if(localStorage.getItem("myCart") != null){
+    var myCart = JSON.parse(localStorage.getItem("myCart")); //get existing myCart array from localStorage
+  }
+  else{
+    var myCart = [];
+  }
   // Details Page: Add new buns to cart number = orderQuant + old cartNumber = new cartNumber
   if (orderQuant==0){
     document.getElementsByClassName("addtocart").disabled=true;
@@ -82,21 +107,24 @@ function addToCart() {
 
   // Cart Page:  Add bun glazes & quantities to My Cart ...  (flavor is static; cost per quantity is static)
   if (document.getElementById("quantNG").value != "0"){
-    new originalBun("No Glaze", document.getElementById("quantNG").value); //Turn into integer for .value?
     console.log("No Glaze x" + document.getElementById("quantNG").value);
+    myCart.push(new originalBun("No Glaze", document.getElementById("quantNG").value)); //Turn into integer for .value?  --> parseInt()
   }
   if (document.getElementById("quantSM").value != "0"){
-    new originalBun("Sugar Milk", document.getElementById("quantSM").value); //Turn into integer for .value?
     console.log("Sugar Milk x" + document.getElementById("quantSM").value);
+    myCart.push(new originalBun("Sugar Milk", document.getElementById("quantSM").value)); //Turn into integer for .value?  --> parseInt()
   }
   if (document.getElementById("quantVM").value != "0"){
-    new originalBun("Vanilla Milk", document.getElementById("quantVM").value); //Turn into integer for .value?
     console.log("Vanilla Milk x" + document.getElementById("quantVM").value);
+    myCart.push(new originalBun("Vanilla Milk", document.getElementById("quantVM").value)); //Turn into integer for .value?  --> parseInt()
   }
   if (document.getElementById("quantDC").value != "0"){
-    new originalBun("Double Chocolate", document.getElementById("quantDC").value); //Turn into integer for .value?
     console.log("Double Chocolate x" + document.getElementById("quantDC").value);
+    myCart.push(new originalBun("Double Chocolate", document.getElementById("quantDC").value)); //Turn into integer for .value?  --> parseInt()
     }
+  localStorage.setItem("myCart", JSON.stringify(myCart));
+  console.log(JSON.parse(localStorage.getItem("myCart")))
+
 
   // Details Page:  Reset all dropdowns & orderQuant after "Add to Cart"
   document.getElementById("quantNG").value = 0;

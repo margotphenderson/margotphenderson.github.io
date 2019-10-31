@@ -503,31 +503,31 @@ select:focus {
 #progress-cart a{
   display:inline-block;
   position:absolute;
-  left:238px;
-  top: 207px;
+  left:17.2%;
+  top: 27.1%;
   color: #515151;
   /* font-family: "Open Sans", sans-serif; */
-  font-size: 13px;
+  font-size: 12px;
 }
 
 #progress-delivery a{
   display:inline-block;
   position:absolute;
-  left:332px;
-  top: 207px;
+  left:24.5%;
+  top: 27.1%;
   color: #515151;
   /* font-family: "Open Sans", sans-serif; */
-  font-size: 13px;
+  font-size: 12px;
 }
 
 #progress-billing a{
   display:inline-block;
   position:absolute;
-  left:433px;
-  top: 207px;
+  left:31.75%;
+  top: 27.1%;
   color: #515151;
   /* font-family: "Open Sans", sans-serif; */
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .title{
