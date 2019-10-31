@@ -233,26 +233,8 @@ function imageChange5(){
 
 
 
-
-
-
 // Change thumbnail image when icing dropdown is changed.
 // function imageChangeCart(){
 //   document.getElementById('item-thumbnail').setAttribute("src", "Images/" + ".item-glaze.value")
-//   // DOESN'T WORK YET
+//   // DOESN'T WORK
 // }
-
-//   sessionStorage.setItem('key', 'value');
-// sessionStorage.addToCart()
-
-  /////// Add 1 to cart on button click ////////
-  // function clickCounter() {
-  //   if (typeof(Storage) !== "undefined") {
-  //     if (sessionStorage.clickcount) {
-  //       sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
-  //     } else {
-  //       sessionStorage.clickcount = 1;
-  //     }
-  //     document.getElementById("cartNumber").innerHTML = sessionStorage.clickcount;
-  //   }
-  // }
