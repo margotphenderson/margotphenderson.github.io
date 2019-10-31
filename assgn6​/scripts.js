@@ -5,9 +5,11 @@ var quantDC; //number double choc (selected on details page)
 var orderQuant = 0; //number of buns to add to existing cart (from details page)
 var cartNumber; //number buns currently in cart
 var pricing = 0.00; //total cost of buns, on details page
+
 var cartSize = 0;
-
-
+var costRolls = 0;
+var costTax = 0;
+var costTotal = 0;
 
 
 function loadCart(){
@@ -55,6 +57,12 @@ function loadCart(){
       document.getElementById("bunPrice"+i).innerHTML="$ "+(bunItem.quantity*3.95).toFixed(2);
       cartSize = cartSize+parseInt(bunItem.quantity);
       document.getElementById("cartNumber").innerHTML=cartSize;
+      costRolls = "$ " + (cartSize*3.95).toFixed(2);
+      document.getElementById("cost-rolls").innerHTML=costRolls;
+      costTax =  "$ " + ((cartSize*3.95)*0.07).toFixed(2);
+      document.getElementById("cost-tax").innerHTML=costTax;
+      costTotal = "$ " + ( (cartSize*3.95) + ((cartSize*3.95)*0.07) + 5).toFixed(2) ;
+      document.getElementById("cost-total").innerHTML=costTotal;
   }
 
 }
@@ -150,8 +158,6 @@ function addToCart() {
     cartNumber = parseInt(document.getElementById("cartNumber").innerHTML);
     cartNumber = cartNumber + orderQuant;
     document.getElementById("cartNumber").innerHTML = cartNumber;
-
-    // localStorage.setItem("cartNumber", JSON.stringify(cartNumber));
 
 
   // Cart Page:  Add bun glazes & quantities to My Cart ...  (flavor is static; cost per quantity is static)
