@@ -547,6 +547,10 @@ select:focus {
   padding:0;
 }
 
+.all-items{
+    border-bottom: 1px solid lightgray;
+}
+
 /* #all-items p{
   margin: auto;
   text-align: center;
@@ -560,8 +564,9 @@ select:focus {
   padding-bottom:30px;
   margin:auto;
   align-items: center;
+  vertical-align: center;
+  text-align: center;
   justify-content:space-between;
-  border-bottom: 1px solid lightgray;
 }
 
 .new-item select{
@@ -644,6 +649,10 @@ select:focus {
 }
 
 #item-price p{
+  display: inline-block;
+}
+
+#dollarSign {
   display: inline-block;
 }
 

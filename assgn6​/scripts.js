@@ -1,5 +1,14 @@
-// Cart Page:  Load existing order (if any) from local storage
-// localStorage.setItem("myCart", JSON.stringify(myCart));
+var quantNG; //number no glaze (selected on details page)
+var quantSM; //number sugar milk (selected on details page)
+var quantVM; //number vanilla milk (selected on details page)
+var quantDC; //number double choc (selected on details page)
+var orderQuant = 0; //number of buns to add to existing cart (from details page)
+var cartNumber; //number buns currently in cart
+var pricing = 0.00; //total cost of buns, on details page
+var cartSize = 0;
+
+
+
 
 function loadCart(){
   if(localStorage.getItem("myCart") != null){
@@ -10,50 +19,12 @@ function loadCart(){
   }
   for (i=0; i<myCart.length; i++){
     var bunItem = myCart[i];
-    if (i===0){
-      document.getElementById("all-items").innerHTML=`      <div id="new-item" class="new-item">
-              <div class="remove-thumbnail">
-
-                <!-- cancel item -->
-                <div class="remove">
-                  <a id="cancel">X &nbsp;&nbsp; </a>
-                </div>
-
-                <!-- item thumbnail -->
-                <img id="item-thumbnail" src="Images/noicing.jpg">
-              </div>
-
-              <!-- flavor -->
-              <div id="item-flavor" class="item-flavor">
-                    <p>The Original</p>
-              </div>
-              <!-- glaze dropdown -->
-              <div id="item-glaze" class="item-glaze" onchange="imageChangeCart()">
-
-              </div>
-              <!-- quantity dropdown -->
-              <div id="item-quantity" class="item-quantity">
-
-              </div>
-
-              <!-- item price -->
-              <div id="item-price" class="item-price">
-                <p>$&nbsp;</p>
-                <div id="bunPrice">
-                </div>
-              </div>
-            </div>`;
-      document.getElementById("item-glaze").innerHTML=bunItem.glaze; // .value or .innerHTML ?
-      document.getElementById("item-quantity").innerHTML=bunItem.quantity;
-      document.getElementById("bunPrice").innerHTML=(bunItem.quantity*3.95).toFixed(2);
-    }
-    if (i>0){
       document.getElementById("all-items").innerHTML+=`      <div id="new-item" class="new-item">
               <div class="remove-thumbnail">
 
                 <!-- cancel item -->
                 <div class="remove">
-                  <a id="cancel">X &nbsp;&nbsp; </a>
+                  <a id="cancel" onclick="deleteIndex(`+i+`)">X &nbsp;&nbsp; </a>
                 </div>
 
                 <!-- item thumbnail -->
@@ -75,34 +46,41 @@ function loadCart(){
 
               <!-- item price -->
               <div id="item-price" class="item-price">
-                <p>$&nbsp;</p>
                 <div id="bunPrice`+i+`">
                 </div>
               </div>
             </div>`;
       document.getElementById("item-glaze"+i).innerHTML=bunItem.glaze; // .value or .innerHTML ?
       document.getElementById("item-quantity"+i).innerHTML=bunItem.quantity;
-      document.getElementById("bunPrice"+i).innerHTML=(bunItem.quantity*3.95).toFixed(2);
-    }
+      document.getElementById("bunPrice"+i).innerHTML="$ "+(bunItem.quantity*3.95).toFixed(2);
+      cartSize = cartSize+parseInt(bunItem.quantity);
+      document.getElementById("cartNumber").innerHTML=cartSize;
   }
+
+}
+
+function deleteIndex(bunIndex){
+  console.log("delete called");
+  // myCart = array()
+  var myCart = JSON.parse(localStorage.getItem("myCart"));
+  myCart.splice(bunIndex,1);
+  localStorage.setItem("myCart", JSON.stringify(myCart));
+  location.reload();
 }
 
 function loadDetails(){
+  var cartSize = 0;
   if(localStorage.getItem("myCart") != null){
     var myCart = JSON.parse(localStorage.getItem("myCart")); //get existing myCart array from localStorage
+    for (var i=0; i<myCart.length; i++) {
+      cartSize = cartSize + parseInt(myCart[i].quantity);
+    }
+    document.getElementById("cartNumber").innerHTML = cartSize;
   }
   else{
     var myCart = []; // start an empty myCart array
   }
 }
-
-var quantNG; //number no glaze (selected on details page)
-var quantSM; //number sugar milk (selected on details page)
-var quantVM; //number vanilla milk (selected on details page)
-var quantDC; //number double choc (selected on details page)
-var orderQuant = 0; //number of buns to add to existing cart (from details page)
-var cartNumber; //number buns currently in cart
-var pricing = 0.00; //total cost of buns, on details page
 
 // Details Page:  Add all glaze quantities = orderQuant
 function addQuant(){
@@ -172,6 +150,8 @@ function addToCart() {
     cartNumber = parseInt(document.getElementById("cartNumber").innerHTML);
     cartNumber = cartNumber + orderQuant;
     document.getElementById("cartNumber").innerHTML = cartNumber;
+
+    // localStorage.setItem("cartNumber", JSON.stringify(cartNumber));
 
 
   // Cart Page:  Add bun glazes & quantities to My Cart ...  (flavor is static; cost per quantity is static)
