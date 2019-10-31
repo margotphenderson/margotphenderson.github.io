@@ -10,11 +10,80 @@ function loadCart(){
   }
   for (i=0; i<myCart.length; i++){
     var bunItem = myCart[i];
-    //if (i===0){
-      
+    if (i===0){
+      document.getElementById("all-items").innerHTML=`      <div id="new-item" class="new-item">
+              <div class="remove-thumbnail">
+
+                <!-- cancel item -->
+                <div class="remove">
+                  <a id="cancel">X &nbsp;&nbsp; </a>
+                </div>
+
+                <!-- item thumbnail -->
+                <img id="item-thumbnail" src="Images/noicing.jpg">
+              </div>
+
+              <!-- flavor -->
+              <div id="item-flavor" class="item-flavor">
+                    <p>The Original</p>
+              </div>
+              <!-- glaze dropdown -->
+              <div id="item-glaze" class="item-glaze" onchange="imageChangeCart()">
+
+              </div>
+              <!-- quantity dropdown -->
+              <div id="item-quantity" class="item-quantity">
+
+              </div>
+
+              <!-- item price -->
+              <div id="item-price" class="item-price">
+                <p>$&nbsp;</p>
+                <div id="bunPrice">
+                </div>
+              </div>
+            </div>`;
       document.getElementById("item-glaze").innerHTML=bunItem.glaze; // .value or .innerHTML ?
       document.getElementById("item-quantity").innerHTML=bunItem.quantity;
-    //}
+      document.getElementById("bunPrice").innerHTML=(bunItem.quantity*3.95).toFixed(2);
+    }
+    if (i>0){
+      document.getElementById("all-items").innerHTML+=`      <div id="new-item" class="new-item">
+              <div class="remove-thumbnail">
+
+                <!-- cancel item -->
+                <div class="remove">
+                  <a id="cancel">X &nbsp;&nbsp; </a>
+                </div>
+
+                <!-- item thumbnail -->
+                <img id="item-thumbnail" src="Images/noicing.jpg">
+              </div>
+
+              <!-- flavor -->
+              <div id="item-flavor" class="item-flavor">
+                    <p>The Original</p>
+              </div>
+              <!-- glaze dropdown -->
+              <div id="item-glaze`+i+`" class="item-glaze" onchange="imageChangeCart()">
+
+              </div>
+              <!-- quantity dropdown -->
+              <div id="item-quantity`+i+`" class="item-quantity">
+
+              </div>
+
+              <!-- item price -->
+              <div id="item-price" class="item-price">
+                <p>$&nbsp;</p>
+                <div id="bunPrice`+i+`">
+                </div>
+              </div>
+            </div>`;
+      document.getElementById("item-glaze"+i).innerHTML=bunItem.glaze; // .value or .innerHTML ?
+      document.getElementById("item-quantity"+i).innerHTML=bunItem.quantity;
+      document.getElementById("bunPrice"+i).innerHTML=(bunItem.quantity*3.95).toFixed(2);
+    }
   }
 }
 

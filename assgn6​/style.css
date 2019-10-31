@@ -547,6 +547,12 @@ select:focus {
   padding:0;
 }
 
+/* #all-items p{
+  margin: auto;
+  text-align: center;
+  margin-top: 30px;
+} */
+
 .new-item{
   display:flex;
   width:70%;
@@ -614,12 +620,12 @@ select:focus {
 
 .item-flavor p{
   width:20%;
-  text-align: center;
   text-align: left;
-  vertical-align: bottom;
-  padding: 0;
-  padding-top: 15px;
-  margin: 0;
+  margin:auto;
+  /* vertical-align: bottom;
+  padding: 0; */
+  padding-top: 5px;
+  /* margin: 0; */
   width: 150px;
   height: 35px;
   font-size: 16px;
@@ -632,19 +638,23 @@ select:focus {
   width:20%;
   text-align: center;
 }
-.item-price{
+#item-price{
   width:20%;
   text-align: right;
+}
+
+#item-price p{
+  display: inline-block;
+}
+
+#bunPrice{
+  display: inline-block;
 }
 
 .calculate-price{
   display:flex;
   width:70%;
   margin:auto;
-  /* justify-content:flex-end;
-  align-content: flex-end;
-  align-items: flex-end;
-  text-align: right; */
 }
 
 .price-left-empty{
