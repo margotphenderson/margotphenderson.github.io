@@ -1,0 +1,70 @@
+body{
+  background-color: black;
+  color: lightgray;
+}
+
+.header{
+  background: none;
+  /* position:absolute; */
+  top:;
+  display:block;
+}
+
+h1{
+  /* color:white; */
+}
+
+p{
+  /* color:lightgray; */
+}
+
+.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+#goldenrecord-orig{
+  top: -110%;
+  display:block;
+  /* text-align:center; */
+  z-index:3;
+  /* margin: 0; */
+  margin:auto;
+  padding:0;
+  width:100%;
+  width:70%;
+}
+
+#toptitle{
+  /* position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+   */
+  /* position: absolute;
+  margin:auto;
+  text-align:center;
+  justify-content: center; */
+}
+
+.allLinks{
+  justify-content: center;
+  text-align: center;
+  display: inline-block;
+  width:100%;
+  margin:auto;
+  padding:0;
+  /* width:70%; */
+}
+
+.link{
+  display: inline-block;
+  margin:auto;
+}
+
+h3{
+  /* position: -webkit-sticky; */
+  /* Safari */
+  /* position: sticky;
+  top:20%; */
+}
