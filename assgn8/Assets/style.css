@@ -58,9 +58,10 @@ p{
   top: 0;
 }
 
-/* #gr-desc{
-  margin-left:100px;
-} */
+#gr-desc{
+  margin-left:10%;
+  margin-right:10%;
+}
 
 #record-box{
   width:100%;
