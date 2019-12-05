@@ -1,71 +1,78 @@
 <!DOCTYPE html>
 
-<!--
-The .container class provides a responsive fixed width container
-The .container-fluid class provides a full width container, spanning the entire width of the viewport
-
- -->
-
 <html lang="en">
 <head>
   <title>The Voyager Golden Records</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
   <!-- <script src="https://unpkg.com/scrollreveal"></script>
   <script>
       ScrollReveal({ reset: true });
   </script> -->
 
+  <!-- My Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+  <!-- MY CSS -->
   <link rel="stylesheet" type="text/css" href="Assets/style.css">
-  <script type="text/javascript" src="Assets/script.js"></script>
 </head>
 
-<body>
 
-  <!-- <div class="container-fluid"> -->
-  <div class="jumbotron text-center header">
-    <div class=" sticky" id="toptitle">
-      <h1>The Golden Records</h1>
-    </div>
-    <div class="sticky ">
-      <p>In 1977, two gold-plated phonograph records were launched into outer space aboard spacecraft Voyager 1 and Voyager 2.
-        <br>These records are time capsules of planet Earth, intended for any intelligent extraterrestrial life form who may find them.
-        <br> This is what the Golden Records carry.</p>
-    </div>
+<body>
+  <div id="stars-bkgd">
+    <div class="stars"></div>
+    <div class="twinkling"></div>
   </div>
 
+
+  <div class="jumbotron text-center header sticky">
+    <div class="sticky" id="toptitle">
+      <h1>The Golden Records</h1>
+    </div>
+  </div>
+  <div class="text-center" id="gr-desc">
+    <p>In 1977, two gold-plated phonograph records were launched into outer space aboard spacecraft Voyager 1 and Voyager 2.
+      <br>These records are time capsules of planet Earth, intended for any intelligent extraterrestrial life form who may find them.
+      <br> This is what the Golden Records carry.</p>
+  </div>
+
+  <!-- Links to go on top of spinning Golden Record -->
   <div class="container allLinks">
 
     <div class="link 1">
-      <p>Link</p>
+      <h2>Link</h2>
     </div>
     <div class="link 2">
-      <p>Link</p>
+      <h2>Link</h2>
     </div>
     <div class="link 3">
-      <p>Link</p>
+      <h2>Link</h2>
     </div>
     <div class="link 4">
-      <p>Link</p>
+      <h2>Link</h2>
     </div>
     <div class="link 5">
-      <p>Link</p>
+      <h2>Link</h2>
     </div>
     <div class="link 6">
-      <p>Link</p>
+      <h2>Link</h2>
     </div>
 
   </div>
-  <img src="Assets/Images/goldenrecord-orig.png" class="img-responsive center-block sticky" id="goldenrecord-orig" alt="Golden Record">
+
+  <!-- Spinning image of Golden Record -->
+  <div id="record-box">
+    <img src="Assets/Images/goldenrecord-orig.png" id="gr-orig" class="img-responsive center-block sticky" alt="Golden Record">
+  </div>
+  <div id="spacer">
+  </div>
 
   <!-- Official Messages -->
   <div class="allMessages container">
     <div class="row">
-      <h2 class="sectionheader text-center">Messages</h2>
+      <h2 class="sectionheader text-center">MESSAGES</h2>
       <div class="col-sm-12 ">
         <p>"This Voyager spacecraft was constructed by the United States of America. We are a community of 240 million human beings among the more than 4 billion who inhabit the planet Earth. We human beings are still divided into nation states, but these states are rapidly becoming a global civilization. We cast this message into the cosmos ... It is likely to survive a billion years into our future, when our civilization is profoundly altered and the surface of the Earth may be vastly changed. Of the 200 billion stars in the Milky Way galaxy, some – perhaps many – may have inhabited planets and space faring civilizations. If one such civilization intercepts Voyager and can understand these recorded contents, here is our message: This is a present from a small distant world, a token of our sounds, our science, our images, our music, our thoughts, and our feelings. We are attempting to survive our time so we may live into yours. We hope some day, having solved the problems we face, to join a community of galactic civilizations. This record represents our hope and our determination and our goodwill in a vast and awesome universe."<br><br>- U.S. President Jimmy Carter</p>
         </div>
@@ -74,190 +81,207 @@ The .container-fluid class provides a full width container, spanning the entire 
 
   <!-- Images -->
   <div class="container" id="all-record-imgs">
-    <h2 class="sectionheader text-center">Images From Earth</h2>
-    <div class="row">
+    <h2 class="sectionheader text-center">IMAGES</h2>
+
+    <div class="row img-row">
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img1.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img1.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img2.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img2.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img3.gif" class="record-img">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img4.gif" class="record-img">
-      </div>
-      <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img5.gif" class="record-img">
-      </div>
-      <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img6.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img3.gif" class="record-imgs">
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img7.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img4.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img8.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img5.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img9.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img6.gif" class="record-imgs">
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img10.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img7.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img11.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img8.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img12.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img9.gif" class="record-imgs">
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img13.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img10.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img14.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img11.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img15.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img12.gif" class="record-imgs">
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img16.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img13.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img17.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img14.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img18.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img15.gif" class="record-imgs">
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img19.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img16.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img20.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img17.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img21.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img18.gif" class="record-imgs">
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img22.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img19.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img23.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img20.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img24.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img21.gif" class="record-imgs">
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img25.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img22.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img26.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img23.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img27.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img24.gif" class="record-imgs">
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img28.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img25.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img29.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img26.jpg" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img30.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img27.gif" class="record-imgs">
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img31.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img28.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img32.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img29.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img33.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img30.gif" class="record-imgs">
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img34.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img31.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img35.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img32.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img36.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img33.gif" class="record-imgs">
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img37.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img34.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img38.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img35.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img39.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img36.gif" class="record-imgs">
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img40.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img37.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img41.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img38.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img42.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img39.gif" class="record-imgs">
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img43.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img40.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img44.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img41.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img45.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img42.gif" class="record-imgs">
       </div>
     </div>
+
     <div class="row">
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img46.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img43.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img47.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img44.gif" class="record-imgs">
       </div>
       <div class="col-sm-4">
-        <img src="Assets/Images/onrecord/record-img48.gif" class="record-img">
+        <img src="Assets/Images/onrecord/record-img45.gif" class="record-imgs">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="Assets/Images/onrecord/record-img46.gif" class="record-imgs">
+      </div>
+      <div class="col-sm-4">
+        <img src="Assets/Images/onrecord/record-img47.gif" class="record-imgs">
+      </div>
+      <div class="col-sm-4">
+        <img src="Assets/Images/onrecord/record-img48.gif" class="record-imgs">
       </div>
     </div>
 
   </div>
+  <!-- collapsed -->
 
   <!-- Music -->
   <div class="allMusic container">
     <div class="row">
-      <h3 class="sectionheader text-center">Music of the World</h3>
+      <h2 class="sectionheader text-center">MUSIC</h2>
       <div class="col-sm-4">
         <p>Music here<br>here<br>here</p>
       </div>
@@ -269,11 +293,12 @@ The .container-fluid class provides a full width container, spanning the entire 
       </div>
     </div>
   </div>
+  <!-- collapsed -->
 
   <!-- Earth Sounds -->
   <div class="allSounds container">
     <div class="row">
-      <h3 class="sectionheader text-center">Sounds of Earth</h3>
+      <h2 class="sectionheader text-center">SOUNDS</h2>
       <div class="col-sm-4">
         <p>Sounds here<br>here<br>here</p>
       </div>
@@ -289,7 +314,7 @@ The .container-fluid class provides a full width container, spanning the entire 
 <!-- Language Greetings -->
   <div class="allGreetings container">
     <div class="row">
-      <h2 class="sectionheader text-center">Language Greetings</h2>
+      <h2 class="sectionheader text-center">GREETINGS</h2>
       <div class="col-sm-4">
         <p>Akkadian<br>"May all be very well"</p>
         <p>Amoy (Min dialect)<br>"Friends of space, how are you all? Have you eaten yet? Come visit us if you have time."</p>
@@ -356,5 +381,10 @@ The .container-fluid class provides a full width container, spanning the entire 
 
 <!-- Copyright info? -->
 
+<!-- Bootstrap & jquery JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<!-- My JS -->
+  <script type="text/javascript" src="Assets/script.js"></script>
 </body>
 </html>
