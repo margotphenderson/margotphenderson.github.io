@@ -81,6 +81,7 @@ p{
   z-index:2;
   margin:auto;
   height:130vh;
+  /* min-height:; */
   width: auto;
   object-fit: scale-down;
 }
@@ -219,6 +220,7 @@ https://mkrtchyan.ga
   height: 48px;
   right: 25px;
   background: url(https://3.bp.blogspot.com/-GZOBULN1Q4s/VbNxQrf37EI/AAAAAAAAAPk/rak337seJ70/s1600/Ask.png) no-repeat 50% 0;
+  /* background: url("/Assets/Ask-yellow.png") no-repeat 50% 0; */
   opacity: 0;
   -webkit-transition: visibility .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -webkit-transform .6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
   -moz-transition: visibility .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), opacity .6s cubic-bezier(0.6, 0.04, 0.98, 0.335), -moz-transform .6s cubic-bezier(0.6, 0.04, 0.98, 0.335);
