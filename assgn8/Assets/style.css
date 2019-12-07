@@ -25,8 +25,6 @@ body{
 
 .header{
   background: none;
-  /* position:absolute; */
-  /* top: -10%; */
   display:block;
   margin:10%;
   padding:0;
@@ -71,7 +69,7 @@ a:clicked {
 }
 
 .jumbotron{
-  z-index:5;
+  z-index:10;
   margin:0;
 }
 
@@ -80,7 +78,7 @@ a:clicked {
   font-weight: 100px;
   /* color:white; */
   /* color:gray; */
-  z-index:5;
+  z-index:10;
   margin:3%;
 }
 h1{
@@ -88,32 +86,38 @@ h1{
   font-weight: 100px;
   /* color:white; */
   /* color:gray; */
-  z-index:5;
+  z-index:10;
   margin:3%;
+}
+
+#banner-cover{
+  height: 140px;
+  width:100%;
+  background-color: black;
+  object-fit:cover;
+  overflow:hidden;
+  z-index:8;
+  position: fixed;
+  top:0;
+  background: linear-gradient(to bottom, black, black, transparent 100%);
+}
+
+#gr-desc{
+  z-index:4;
 }
 
 h2{
   font-family: 'Playfair Display', serif;
   font-weight:100;
-  /* font-size: ; */
   color:lightgray;
-  /* position: -webkit-sticky; */
-  /* Safari */
-  /* position: sticky; */
-  /* top:20%; */
-  /* color:white; */
   margin: 50px;
   margin-top:10%;
+  z-index:5;
 }
-/* h4{
-  font-family: 'Playfair Display', serif;
-  font-weight:100;
-  color:gray;
-} */
 
-.section-caption{
+/* .section-caption{
   text-align: center;
-}
+} */
 
 p{
   color:lightgray;
@@ -123,92 +127,71 @@ p{
   margin-right:10%;
 }
 
-.all-links{
+/* .all-links{
   justify-content: center;
   text-align: center;
   display: inline-block;
   width:100%;
   margin:auto;
   padding:0;
-  /* width:70%; */
-  /* position: ; */
-  z-index:5;
-  position:absolute;
-  /* top:; */
+  z-index: 5;
   bottom:35vh;
-  transform-origin:50% 50vh;
 }
-
-/* .all-Links link1{
-
-} */
-
-/* #messageshead
-#all-record-imgs
-#musichead
-#soundshead
-#greetingshead */
 
 .link{
   display: inline-block;
   margin:auto;
-  z-index:5;
-}
-
-/* #gr-desc{
-  margin-left:10%;
-  margin-right:10%;
+  z-index:4;
+  font-family: 'Playfair Display', serif;
+  font-weight:100;
 } */
 
-#record-box{
-  width:100%;
-  height:64vh;
-  /* border: 1px gray solid; */
+#sections{
+  z-index:5;
+  text-align: center;
+}
+
+.sectionslink{
+  font-family: 'Playfair Display', serif;
+  font-weight:600;
+  font-size:3vh;
+}
+
+/* #link1{
   position:absolute;
-  display:block;
-  bottom:0;
+  bottom:-30vh;
+  left:10% 9vw;
+} */
+
+#record-container{
+  z-index:-5;
+  width:100%;
   text-align:center;
+  /* border: 1px red solid; */
+  bottom:0;
 }
 
 #gr-orig{
+  z-index:2;
   position: sticky;
   display:inline-block;
-  z-index:2;
   margin:auto;
-  height:130vh;
-  /* min-height:; */
+  height:140vh;
   width: auto;
   object-fit: scale-down;
+  /* border: 1px red solid; */
 }
-
-/* .sticky #gr-orig{
-  position: -webkit-sticky;
-  position: sticky;
-  top: 20%;
-} */
 
 #spacer{
   /* background-color: blue; */
-  /* width: 200px; */
-  /* height: 100px; */
-  /* float:left; */
   display:inline-block;
   width:100%;
   /* height:50%; */
   height:130vh;
-
+  /* border: 1px red solid; */
 }
 
-/* #toptitle{
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  position: absolute;
-  margin:auto;
-  text-align:center;
-  justify-content: center;
-} */
-
+/* ========== Images on golden record ============================================ */
 
 .record-imgs{
   width: 100%;
@@ -285,20 +268,6 @@ https://mkrtchyan.ga
   -o-animation:move-twink-back 600s linear infinite;
   -webkit-animation:move-twink-back 600s linear infinite;
   animation:move-twink-back 600s linear infinite;
-}
-
-/* ========================================================================================= */
-
-#stars-banner{
-  height: 140px;
-  width:100%;
-  background-color: black;
-  /* object-fit:cover; */
-  overflow:hidden;
-  z-index:4;
-  position: fixed;
-  top:0;
-  background: linear-gradient(to bottom, black, black, transparent 100%);
 }
 
 /* ========================================================================================= */
