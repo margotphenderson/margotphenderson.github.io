@@ -15,7 +15,7 @@ window.addEventListener("scroll", function() {
 // $(function(){  // $(document).ready shorthand
 //   $('.container').fadeIn('slow');
 // });
-// 
+//
 // $(document).ready(function() {
 //     /* Every time the window is scrolled ... */
 //     $(window).scroll( function(){
