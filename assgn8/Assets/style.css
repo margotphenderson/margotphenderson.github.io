@@ -7,10 +7,19 @@
 /* font-family: 'Lato', sans-serif; */
 /* Lato:100,100i,300,300i,400,400i,700,700i,900,900i */
 
+/* font-family: 'Sulphur Point', sans-serif; */
+/* Sulphur+Point:300,400,700 */
+
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   background-color: black;
   color: white;
   font-family: 'Lato', sans-serif;
+  /* font-family: 'Open Sans', sans-serif; */
+  /* font-family: 'Sulphur Point', sans-serif; */
   font-weight: 300;
 }
 
@@ -19,6 +28,46 @@ body{
   /* position:absolute; */
   /* top: -10%; */
   display:block;
+  margin:10%;
+  padding:0;
+}
+
+/* Links styles */
+a {
+  text-decoration: none;
+  color:lightgray;
+}
+
+/* ----------------------------------------------------------- */
+/* Links hover:  effect-shine from https://codepen.io/colloque/pen/bDgmx */
+a:hover {
+  text-decoration: none;
+  color:lightgray;
+
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+a:clicked {
+  text-decoration: none;
+  color:lightgray;
+}
+/* ----------------------------------------------------------- */
+
+.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  /* top: -5%; */
+  top: 10px;
 }
 
 .jumbotron{
@@ -26,38 +75,84 @@ body{
   margin:0;
 }
 
+#toptitle{
+  font-family: 'Playfair Display', serif;
+  font-weight: 100px;
+  /* color:white; */
+  /* color:gray; */
+  z-index:5;
+  margin:3%;
+}
 h1{
   font-family: 'Playfair Display', serif;
-  color:white;
+  font-weight: 100px;
+  /* color:white; */
+  /* color:gray; */
   z-index:5;
-  margin:0;
+  margin:3%;
 }
 
 h2{
   font-family: 'Playfair Display', serif;
-  font-weight:400;
+  font-weight:100;
   /* font-size: ; */
   color:lightgray;
   /* position: -webkit-sticky; */
   /* Safari */
-  /* position: sticky;
-  top:20%; */
+  /* position: sticky; */
+  /* top:20%; */
   /* color:white; */
   margin: 50px;
+  margin-top:10%;
+}
+/* h4{
+  font-family: 'Playfair Display', serif;
+  font-weight:100;
+  color:gray;
+} */
+
+.section-caption{
+  text-align: center;
 }
 
 p{
   color:lightgray;
+  font-family: 'Lato';
   font-size: 16px;
   margin-left:10%;
   margin-right:10%;
 }
 
-.sticky {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  /* top: -5%; */
-  top: 0;
+.all-links{
+  justify-content: center;
+  text-align: center;
+  display: inline-block;
+  width:100%;
+  margin:auto;
+  padding:0;
+  /* width:70%; */
+  /* position: ; */
+  z-index:5;
+  position:absolute;
+  /* top:; */
+  bottom:35vh;
+  transform-origin:50% 50vh;
+}
+
+/* .all-Links link1{
+
+} */
+
+/* #messageshead
+#all-record-imgs
+#musichead
+#soundshead
+#greetingshead */
+
+.link{
+  display: inline-block;
+  margin:auto;
+  z-index:5;
 }
 
 /* #gr-desc{
@@ -67,7 +162,7 @@ p{
 
 #record-box{
   width:100%;
-  height:65vh;
+  height:64vh;
   /* border: 1px gray solid; */
   position:absolute;
   display:block;
@@ -76,7 +171,7 @@ p{
 }
 
 #gr-orig{
-  /* position: sticky; */
+  position: sticky;
   display:inline-block;
   z-index:2;
   margin:auto;
@@ -85,6 +180,12 @@ p{
   width: auto;
   object-fit: scale-down;
 }
+
+/* .sticky #gr-orig{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20%;
+} */
 
 #spacer{
   /* background-color: blue; */
@@ -107,25 +208,6 @@ p{
   text-align:center;
   justify-content: center;
 } */
-
-.allLinks{
-  justify-content: center;
-  text-align: center;
-  display: inline-block;
-  width:100%;
-  margin:auto;
-  padding:0;
-  /* width:70%; */
-  /* position: ; */
-  z-index:5;
-  position:absolute;
-}
-
-.link{
-  display: inline-block;
-  margin:auto;
-  z-index:5;
-}
 
 
 .record-imgs{
@@ -182,7 +264,7 @@ https://mkrtchyan.ga
     to {background-position:10000px 0;}
 }
 .stars, .twinkling {
-  position:absolute;
+  position:fixed;
   top:0;
   left:0;
   right:0;
@@ -203,6 +285,20 @@ https://mkrtchyan.ga
   -o-animation:move-twink-back 600s linear infinite;
   -webkit-animation:move-twink-back 600s linear infinite;
   animation:move-twink-back 600s linear infinite;
+}
+
+/* ========================================================================================= */
+
+#stars-banner{
+  height: 140px;
+  width:100%;
+  background-color: black;
+  /* object-fit:cover; */
+  overflow:hidden;
+  z-index:4;
+  position: fixed;
+  top:0;
+  background: linear-gradient(to bottom, black, black, transparent 100%);
 }
 
 /* ========================================================================================= */

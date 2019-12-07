@@ -14,7 +14,7 @@
   </script> -->
 
   <!-- My Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sulphur+Point:300,400,700|Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Playfair+Display:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
   <!-- MY CSS -->
   <link rel="stylesheet" type="text/css" href="Assets/style.css">
 </head>
@@ -26,51 +26,66 @@
     <div class="twinkling"></div>
   </div>
 
+  <div id="stars-banner">
+    <!-- <div id="stars-bkgd">
+      <div class="stars"></div>
+      <div class="twinkling"></div>
+    </div> -->
+  </div>
 
   <div class="jumbotron text-center header sticky">
     <div class="sticky" id="toptitle">
-      <h1>The Golden Records</h1>
+      <h1>
+        <a href="#toptitle">The Voyager Golden Records</a>
+      </h1>
     </div>
+
   </div>
   <div class="text-center" id="gr-desc">
-    <p>In 1977, two gold-plated phonograph records were launched into outer space aboard spacecraft Voyager 1 and Voyager 2. These records are time capsules of planet Earth, intended for any intelligent extraterrestrial life form who may find them.
+    <p>In 1977, two gold-plated phonograph records were launched into outer space aboard spacecraft Voyager 1 and Voyager 2.
+      <br>These records are time capsules of planet Earth, intended for any intelligent extraterrestrial life form who may find them.
       <br> This is what the Golden Records carry.</p>
   </div>
 
   <!-- Links to go on top of spinning Golden Record -->
-  <!-- <div class="container allLinks">
-
+  <div class="container all-links" id="all-links">
     <div class="link 1">
-      <h2>Link</h2>
+      <h2>
+        <a href="#messageshead">MESSAGES</a>
+      </h2>
     </div>
     <div class="link 2">
-      <h2>Link</h2>
+      <h2>
+        <a href="#all-record-imgs">IMAGES</a>
+      </h2>
     </div>
     <div class="link 3">
-      <h2>Link</h2>
+      <h2>
+        <a href="#musichead">MUSIC</a>
+      </h2>
     </div>
     <div class="link 4">
-      <h2>Link</h2>
+      <h2>
+        <a href="#soundshead">SOUNDS</a>
+      </h2>
     </div>
     <div class="link 5">
-      <h2>Link</h2>
+      <h2>
+        <a href="#greetingshead">GREETINGS</a>
+      </h2>
     </div>
-    <div class="link 6">
-      <h2>Link</h2>
-    </div>
-
-  </div> -->
+  </div>
 
   <!-- Spinning image of Golden Record -->
   <div class="container" id="record-box">
-    <img src="Assets/Images/goldenrecord-orig.png" id="gr-orig" class="img-responsive center-block sticky" alt="Golden Record">
+    <img src="Assets/Images/goldenrecord-orig.png" class="img-responsive center-block sticky" id="gr-orig" alt="Golden Record">
   </div>
-  <!-- empty spacer to push down content -->
+  <!-- empty spacer to push down content behind record-->
   <div id="spacer">
   </div>
 
   <!-- Official Messages -->
-  <div class="allMessages container">
+  <div class="allMessages container" id="messageshead">
     <div class="row">
       <h2 class="sectionheader text-center">MESSAGES</h2>
       <div class="col-sm-12 ">
@@ -80,7 +95,7 @@
   </div>
 
   <!-- Images -->
-  <div class="container" id="all-record-imgs">
+  <div class="allImages container" id="all-record-imgs">
     <h2 class="sectionheader text-center">IMAGES</h2>
 
     <div class="row img-row">
@@ -279,40 +294,86 @@
   <!-- collapsed -->
 
   <!-- Music -->
-  <div class="allMusic container">
+  <div class="allMusic container" id="musichead">
     <div class="row">
       <h2 class="sectionheader text-center">MUSIC</h2>
       <div class="col-sm-4">
-        <p>Music here<br>here<br>here</p>
+        <p>Bach, Brandenburg Concerto No. 2 in F. First Movement, Munich Bach Orchestra, Karl Richter, conductor. 4:40</p>
+        <p>Java, court gamelan, "Kinds of Flowers," recorded by Robert Brown. 4:43</p>
+        <p>Senegal, percussion, recorded by Charles Duvelle. 2:08</p>
+        <p>Zaire, Pygmy girls' initiation song, recorded by Colin Turnbull. 0:56</p>
+        <p>Australia, Aborigine songs, "Morning Star" and "Devil Bird," recorded by Sandra LeBrun Holmes. 1:26</p>
+        <p>Mexico, "El Cascabel," performed by Lorenzo Barcelata and the Mariachi México. 3:14</p>
+        <p>"Johnny B. Goode," written and performed by Chuck Berry. 2:38</p>
+        <p>New Guinea, men's house song, recorded by Robert MacLennan. 1:20</p>
+        <p>Japan, shakuhachi, "Tsuru No Sugomori" ("Crane's Nest,") performed by Goro Yamaguchi. 4:51</p>
+        </div>
+      <div class="col-sm-4">
+        <p>Bach, "Gavotte en rondeaux" from the Partita No. 3 in E major for Violin, performed by Arthur Grumiaux. 2:55</p>
+        <p>Mozart, The Magic Flute, Queen of the Night aria, no. 14. Edda Moser, soprano. Bavarian State Opera, Munich, Wolfgang Sawallisch, conductor. 2:55</p>
+        <p>Georgian S.S.R., chorus, "Tchakrulo," collected by Radio Moscow. 2:18</p>
+        <p>Peru, panpipes and drum, collected by Casa de la Cultura, Lima. 0:52</p>
+        <p>"Melancholy Blues," performed by Louis Armstrong and his Hot Seven. 3:05</p>
+        <p>Azerbaijan S.S.R., bagpipes, recorded by Radio Moscow. 2:30</p>
+        <p>Stravinsky, Rite of Spring, Sacrificial Dance, Columbia Symphony Orchestra, Igor Stravinsky, conductor. 4:35</p>
+        <p>Bach, The Well-Tempered Clavier, Book 2, Prelude and Fugue in C, No.1. Glenn Gould, piano. 4:48</p>
+        <p>Beethoven, Fifth Symphony, First Movement, the Philharmonia Orchestra, Otto Klemperer, conductor. 7:20</p>
       </div>
       <div class="col-sm-4">
-        <p>Music here<br>here<br>here</p>
-      </div>
-      <div class="col-sm-4">
-        <p>Music here<br>here<br>here</p>
+        <p>Bulgaria, "Izlel je Delyo Hagdutin," sung by Valya Balkanska. 4:59</p>
+        <p>Navajo Indians, Night Chant, recorded by Willard Rhodes. 0:57</p>
+        <p>Holborne, Paueans, Galliards, Almains and Other Short Aeirs, "The Fairie Round," performed by David Munrow and the Early Music Consort of London. 1:17</p>
+        <p>Solomon Islands, panpipes, collected by the Solomon Islands Broadcasting Service. 1:12</p>
+        <p>Peru, wedding song, recorded by John Cohen. 0:38</p>
+        <p>China, ch'in, "Flowing Streams," performed by Kuan P'ing-hu. 7:37</p>
+        <p>India, raga, "Jaat Kahan Ho," sung by Surshri Kesar Bai Kerkar. 3:30</p>
+        <p>"Dark Was the Night," written and performed by Blind Willie Johnson. 3:15</p>
+        <p>Beethoven, String Quartet No. 13 in B flat, Opus 130, Cavatina, performed by Budapest String Quartet. 6:37</p>
       </div>
     </div>
   </div>
   <!-- collapsed -->
 
   <!-- Earth Sounds -->
-  <div class="allSounds container">
+  <div class="allSounds container" id="soundshead">
     <div class="row">
       <h2 class="sectionheader text-center">SOUNDS</h2>
+      <!-- <div class="section-caption text-center">
+        <p>caption</p>
+      </div> -->
+
       <div class="col-sm-4">
-        <p>Sounds here<br>here<br>here</p>
+        <p>Music of The Spheres</p>
+        <p>Volcanoes, Earthquake, and Thunder</p>
+        <p>Mud Pots</p>
+        <p>Wind, Rain, and Surf</p>
+        <p>Crickets and Frogs</p>
+        <p>Birds, Hyena, and Elephant</p>
+        <p>Chimpanzee</p>
       </div>
       <div class="col-sm-4">
-        <p>Sounds here<br>here<br>here</p>
+        <p>Wild Dog</p>
+        <p>Footsteps, Heartbeat, and Laughter</p>
+        <p>Fire and Speech</p>
+        <p>The First Tools</p>
+        <p>Tame Dog</p>
+        <p>Herding Sheep, Blacksmith, and Sawing</p>
+        <p>Tractor and Riveter</p>
       </div>
       <div class="col-sm-4">
-        <p>Sounds here<br>here<br>here</p>
+        <p>Morse Code and Ships</p>
+        <p>Horse and Cart</p>
+        <p>Train</p>
+        <p>Tractor, Bus, and Auto</p>
+        <p>F-111 Flyby and Saturn 5 Lift-off</p>
+        <p>Kiss, Mother and Child</p>
+        <p>Life Signs and Pulsar</p>
       </div>
     </div>
   </div>
 
 <!-- Language Greetings -->
-  <div class="allGreetings container">
+  <div class="allGreetings container" id="greetingshead">
     <div class="row">
       <h2 class="sectionheader text-center">GREETINGS</h2>
       <div class="col-sm-4">
@@ -335,9 +396,9 @@
         <p>Hindi<br>"Greetings from the inhabitants of this world."</p>
         <p>Hittite<br>"Hail."</p>
         <p>Hungarian (Magyar<br>"We are sending greetings in the Hungarian language to all peace-loving beings in the Universe."</p>
-        <p>Ila (Zambia)<br>"We wish all of you well."</p>
       </div>
       <div class="col-sm-4">
+        <p>Ila (Zambia)<br>"We wish all of you well."</p>
         <p>Indonesian<br>"Good night ladies and gentlemen. Goodbye and see you next time."</p>
         <p>Italian<br>"Many greetings and wishes."</p>
         <p>Japanese<br>"Hello? How are you?"</p>
@@ -355,11 +416,11 @@
         <p>Persian<br>"Hello to the residents of far skies."</p>
         <p>Polish<br>"Welcome, creatures from beyond the outer world."</p>
         <p>Portuguese<br>"Peace and happiness to all."</p>
+      </div>
+      <div class="col-sm-4">
         <p>Punjabi<br>"Welcome home. It is a pleasure to receive you."</p>
         <p>Rajasthani<br>"Hello to everyone. We are happy here and you be happy there."</p>
         <p>Romanian<br>"Greetings to everybody."</p>
-      </div>
-      <div class="col-sm-4">
         <p>Russian<br>"Greetings! I Welcome You!"</p>
         <p>Serbian<br>"We wish you everything good from our planet."</p>
         <p>Sinhalese<br>"Wish You a Long Life."</p>
