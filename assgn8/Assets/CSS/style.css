@@ -191,6 +191,14 @@ p{
   /* border: 1px green solid; */
 }
 
+#otherinfo{
+  color:#b88400;
+}
+
+#otherinfo a{
+  font-weight:600;
+}
+
 /* ========== Fade in elements (implement later) ============================================ */
 
 /* .hideme{
